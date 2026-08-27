@@ -1,6 +1,6 @@
 {
   "check_interval_hours": 6,
-  "default_alert_threshold_percent": 25,
+  "default_alert_threshold_percent": 35,
   "products": [
     {
       "name": "Modern Pendant Light",
