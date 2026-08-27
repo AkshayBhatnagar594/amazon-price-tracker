@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PRODUCTS_FILE = ROOT / "products.json"
 HISTORY_FILE = ROOT / "data" / "history.json"
 LATEST_FILE = ROOT / "data" / "latest.json"
+LAST_RUN_FILE = ROOT / "data" / "last_run.json"
 
 HEADERS = {
     "User-Agent": (
@@ -96,17 +97,19 @@ def fetch(url):
 
 
 def check_product(url, fallback_name=None):
-    """Returns (name, price) or (name, None) if the price couldn't be found."""
+    """Returns (name, price, status, detail). status is one of:
+    ok | request_error | captcha | no_price_found
+    """
     url = normalize_url(url)
     try:
         soup = fetch(url)
     except requests.RequestException as e:
         print(f"  [warn] request failed for {url}: {e}")
-        return fallback_name or url, None
+        return fallback_name or url, None, "request_error", str(e)[:300]
 
     if looks_like_captcha(soup):
         print(f"  [warn] Amazon returned a CAPTCHA/robot check for {url} - skipping this run")
-        return fallback_name or url, None
+        return fallback_name or url, None, "captcha", "Amazon served a robot-check page instead of the product page"
 
     title_tag = soup.select_one("#productTitle")
     name = title_tag.get_text(strip=True) if title_tag else (fallback_name or url)
@@ -120,29 +123,32 @@ def check_product(url, fallback_name=None):
                 break
 
     if price is None:
+        detail = f"none of the known price selectors matched (page title: {soup.title.get_text(strip=True) if soup.title else 'n/a'})"
         print(f"  [warn] could not find a price for {url} (Amazon may have changed their page layout)")
+        return name, None, "no_price_found", detail[:300]
 
-    return name, price
+    return name, price, "ok", ""
 
 
 def check_wishlist(url):
     """
-    Returns a list of (name, url, price) tuples for items visible on the
-    first page of a public Amazon wishlist. Amazon loads additional items
-    via JavaScript as you scroll, so only the items on the initial page
-    load are picked up here - see README for details.
+    Returns (items, status, detail). items is a list of
+    (name, url, price) tuples for items visible on the first page of a
+    public Amazon wishlist. Amazon loads additional items via JavaScript
+    as you scroll, so only the items on the initial page load are picked
+    up here - see README for details.
     """
-    results = []
     try:
         soup = fetch(url)
     except requests.RequestException as e:
         print(f"  [warn] request failed for wishlist {url}: {e}")
-        return results
+        return [], "request_error", str(e)[:300]
 
     if looks_like_captcha(soup):
         print(f"  [warn] Amazon returned a CAPTCHA/robot check for wishlist {url} - skipping this run")
-        return results
+        return [], "captcha", "Amazon served a robot-check page instead of the wishlist page"
 
+    results = []
     items = soup.select("li[data-itemid]")
     for item in items:
         item_id = item.get("data-itemid")
@@ -164,9 +170,11 @@ def check_wishlist(url):
         results.append((name or product_url, product_url, price))
 
     if not items:
-        print(f"  [warn] no items found on wishlist page - it may be private, empty, or Amazon changed their layout")
+        detail = f"no items found on wishlist page - it may be private, empty, or Amazon changed their layout (page title: {soup.title.get_text(strip=True) if soup.title else 'n/a'})"
+        print(f"  [warn] {detail}")
+        return results, "no_items_found", detail[:300]
 
-    return results
+    return results, "ok", ""
 
 
 def send_email(changes):
@@ -212,6 +220,7 @@ def main():
 
     now = datetime.now(timezone.utc).isoformat()
     changes = []
+    run_log = []
 
     # Direct product links
     for entry in products_config.get("products", []):
@@ -220,8 +229,10 @@ def main():
         norm_url = normalize_url(url)
 
         print(f"Checking product: {fallback_name or norm_url}")
-        name, price = check_product(url, fallback_name)
+        name, price, status, detail = check_product(url, fallback_name)
         time.sleep(REQUEST_DELAY_SECONDS)
+
+        run_log.append({"type": "product", "url": norm_url, "name": name, "status": status, "detail": detail, "price": price})
 
         if price is None:
             continue
@@ -236,10 +247,14 @@ def main():
     # Wishlists
     for wishlist_url in products_config.get("wishlists", []):
         print(f"Checking wishlist: {wishlist_url}")
-        items = check_wishlist(wishlist_url)
+        items, wl_status, wl_detail = check_wishlist(wishlist_url)
         time.sleep(REQUEST_DELAY_SECONDS)
 
+        run_log.append({"type": "wishlist", "url": wishlist_url, "status": wl_status, "detail": wl_detail, "item_count": len(items)})
+
         for name, product_url, price in items:
+            run_log.append({"type": "wishlist_item", "url": product_url, "name": name, "status": "ok" if price is not None else "no_price_found", "detail": "", "price": price})
+
             if price is None:
                 continue
 
@@ -252,6 +267,7 @@ def main():
 
     save_json(HISTORY_FILE, history)
     save_json(LATEST_FILE, latest)
+    save_json(LAST_RUN_FILE, {"timestamp": now, "results": run_log})
 
     if changes:
         print(f"\n{len(changes)} price change(s) detected:")
