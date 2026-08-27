@@ -3,38 +3,42 @@ name: Test reachability (temporary)
 on:
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Check camelcamelcamel + keepa reachability
         run: |
-          echo "## Reachability test" >> "$GITHUB_STEP_SUMMARY"
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 
-          echo "### camelcamelcamel.com homepage" >> "$GITHUB_STEP_SUMMARY"
-          CODE=$(curl -s -o /tmp/home.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/" || echo "FAIL")
-          echo "HTTP status: $CODE" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          head -c 500 /tmp/home.html >> "$GITHUB_STEP_SUMMARY" || true
-          echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          test_url () {
+            local label="$1" url="$2" outfile="$3"
+            code=$(curl -s -L -o "$outfile" -w "%{http_code}" -A "$UA" "$url" || echo "FAIL")
+            snippet=$(head -c 600 "$outfile" 2>/dev/null | tr -d '\000' | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))')
+            echo "  \"$label\": {\"url\": \"$url\", \"http_code\": \"$code\", \"snippet\": $snippet},"
+          }
 
-          echo "### camelcamelcamel product page (Modern Pendant Light, B0CYZFHWMY)" >> "$GITHUB_STEP_SUMMARY"
-          CODE2=$(curl -s -o /tmp/product.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/product/B0CYZFHWMY" || echo "FAIL")
-          echo "HTTP status: $CODE2" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          head -c 800 /tmp/product.html >> "$GITHUB_STEP_SUMMARY" || true
-          echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "{"
+            test_url "camelcamelcamel_home" "https://camelcamelcamel.com/" /tmp/home.html
+            test_url "camelcamelcamel_our_item" "https://camelcamelcamel.com/product/B0CYZFHWMY" /tmp/p1.html
+            test_url "camelcamelcamel_popular_item" "https://camelcamelcamel.com/product/B00FLYWNYQ" /tmp/p2.html
+            code=$(curl -s -L -o /tmp/keepa.html -w "%{http_code}" -A "$UA" "https://keepa.com/" || echo "FAIL")
+            echo "  \"keepa_home\": {\"url\": \"https://keepa.com/\", \"http_code\": \"$code\"}"
+            echo "}"
+          } > data/reachability_test.json
 
-          echo "### camelcamelcamel product page (known popular ASIN, B00FLYWNYQ - Amazon Basics batteries)" >> "$GITHUB_STEP_SUMMARY"
-          CODE3=$(curl -s -o /tmp/product2.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/product/B00FLYWNYQ" || echo "FAIL")
-          echo "HTTP status: $CODE3" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          head -c 800 /tmp/product2.html >> "$GITHUB_STEP_SUMMARY" || true
-          echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat data/reachability_test.json
 
-          echo "### keepa.com homepage (paid API alternative)" >> "$GITHUB_STEP_SUMMARY"
-          CODE4=$(curl -s -o /tmp/keepa.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://keepa.com/" || echo "FAIL")
-          echo "HTTP status: $CODE4" >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/reachability_test.json
+          git diff --cached --quiet || git commit -m "Reachability test results"
+          git push
