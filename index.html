@@ -154,8 +154,12 @@
   @media (max-width: 700px) {
     .checked { display: none; }
   }
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   @media (max-width: 560px) {
-    .threshold-col { display: none; }
+    table { min-width: 480px; }
   }
 
   /* Connect-token modal */
@@ -619,18 +623,20 @@
     }).join("");
 
     content.innerHTML = `
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th class="threshold-col">Alert near low</th>
-            <th class="checked">Checked</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>${rowsHtml}</tbody>
-      </table>`;
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th class="threshold-col">Alert near low</th>
+              <th class="checked">Checked</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>`;
   }
 
   updateConnectButton();

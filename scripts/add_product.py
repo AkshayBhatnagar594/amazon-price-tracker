@@ -34,6 +34,10 @@ PRODUCTS_FILE = ROOT / "products.json"
 WISHLIST_PATTERN = re.compile(r"/hz/wishlist/|/registry/wishlist/")
 AMAZON_HOST_PATTERN = re.compile(r"amazon\.[a-z.]+$", re.IGNORECASE)
 ASIN_PATTERN = re.compile(r"/(?:dp|gp/product)/([A-Z0-9]{10})", re.IGNORECASE)
+# Amazon's own link shorteners (e.g. shared from the mobile app / Share sheet).
+# These don't point at an amazon.* host directly - they redirect to one, so
+# they need to be resolved before the normal host check can pass.
+SHORTLINK_HOST_PATTERN = re.compile(r"^(a\.co|amzn\.to|amzn\.eu|amzn\.in|amzn\.asia)$", re.IGNORECASE)
 
 HEADERS = {
     "User-Agent": (
@@ -73,6 +77,27 @@ def guess_name_from_url(url):
 
     asin_match = ASIN_PATTERN.search(url)
     return f"Amazon item {asin_match.group(1)}" if asin_match else "Amazon item"
+
+
+def resolve_shortlink(url):
+    """
+    Follows redirects on an Amazon shortlink (a.co, amzn.to, ...) to get the
+    real amazon.* product URL. Returns the resolved URL, or None if it
+    couldn't be resolved.
+    """
+    try:
+        resp = requests.head(url, headers=HEADERS, timeout=15, allow_redirects=True)
+        if resp.url and resp.url != url:
+            return resp.url
+    except requests.RequestException:
+        pass
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15, allow_redirects=True)
+        if resp.url and resp.url != url:
+            return resp.url
+    except requests.RequestException:
+        pass
+    return None
 
 
 def fetch_product_name(url):
@@ -148,11 +173,21 @@ def main():
 
     if not link:
         write_output("error", "No Amazon link was found in the issue body. Please use the 'Add a product to track' issue form.")
-        return 1
+        return 0
 
-    if not AMAZON_HOST_PATTERN.search(urlparse(link if "://" in link else "https://" + link).netloc):
+    netloc = urlparse(link if "://" in link else "https://" + link).netloc
+
+    if SHORTLINK_HOST_PATTERN.match(netloc):
+        resolved = resolve_shortlink(link if "://" in link else "https://" + link)
+        if not resolved or not AMAZON_HOST_PATTERN.search(urlparse(resolved).netloc):
+            write_output("error", f"Couldn't resolve the shortlink '{link}' to an amazon.* product page. Please paste the full amazon.com link instead (open the link in a browser, then copy the address bar URL).")
+            return 0
+        link = resolved
+        netloc = urlparse(link).netloc
+
+    if not AMAZON_HOST_PATTERN.search(netloc):
         write_output("error", f"'{link}' doesn't look like an amazon.* URL. Please double-check the link and reopen the issue.")
-        return 1
+        return 0
 
     norm_url = normalize_url(link)
     is_wishlist = bool(WISHLIST_PATTERN.search(norm_url))
@@ -170,14 +205,14 @@ def main():
     if is_wishlist:
         if norm_url in config["wishlists"]:
             write_output("error", f"That wishlist is already being tracked: {norm_url}")
-            return 1
+            return 0
         config["wishlists"].append(norm_url)
         write_output("ok", f"Added wishlist to tracking: {norm_url}", nickname or "Wishlist")
     else:
         existing_urls = {p["url"] if isinstance(p, dict) else p for p in config["products"]}
         if norm_url in existing_urls:
             write_output("error", f"That product is already being tracked: {norm_url}")
-            return 1
+            return 0
         name = nickname or fetch_product_name(norm_url)
         entry = {"url": norm_url, "name": name}
         config["products"].append(entry)
