@@ -1,8 +1,18 @@
-name: Add product from issue
+name: Add product
 
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
+    inputs:
+      product_link:
+        description: "Amazon product or wishlist link"
+        required: true
+        type: string
+      nickname:
+        description: "Nickname (optional - leave blank to auto-name from the product page)"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -10,7 +20,7 @@ permissions:
 
 jobs:
   add-product:
-    if: contains(github.event.issue.labels.*.name, 'add-product')
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.issue.labels.*.name, 'add-product')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,10 +31,12 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Parse issue and update products.json
+      - name: Parse input and update products.json
         id: add
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
+          PRODUCT_LINK: ${{ github.event.inputs.product_link }}
+          PRODUCT_NICKNAME: ${{ github.event.inputs.nickname }}
         run: python scripts/add_product.py
 
       - name: Commit updated products.json
@@ -33,27 +45,36 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add products.json
-          git commit -m "Add ${{ steps.add.outputs.name }} via issue #${{ github.event.issue.number }}"
+          git commit -m "Add ${{ steps.add.outputs.name }}"
           git push
 
       - name: Rename issue to match the product
-        if: steps.add.outputs.status == 'ok'
+        if: github.event_name == 'issues' && steps.add.outputs.status == 'ok'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue edit ${{ github.event.issue.number }} --title "Track: ${{ steps.add.outputs.name }}"
 
       - name: Comment and close on success
-        if: steps.add.outputs.status == 'ok'
+        if: github.event_name == 'issues' && steps.add.outputs.status == 'ok'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh issue comment ${{ github.event.issue.number }} --body "✅ ${{ steps.add.outputs.message }}. It will be checked on the next scheduled run (every 6 hours), or you can trigger the 'Check prices' workflow manually from the Actions tab to check it right away."
+          gh issue comment ${{ github.event.issue.number }} --body "✅ ${{ steps.add.outputs.message }}. It will be checked on the next scheduled run, or you can trigger the 'Check prices' workflow manually from the Actions tab to check it right away."
           gh issue close ${{ github.event.issue.number }}
 
-      - name: Comment on failure
-        if: steps.add.outputs.status == 'error'
+      - name: Comment on failure (issue)
+        if: github.event_name == 'issues' && steps.add.outputs.status == 'error'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue comment ${{ github.event.issue.number }} --body "❌ ${{ steps.add.outputs.message }}"
+
+      - name: Write run summary (manual dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ "${{ steps.add.outputs.status }}" = "ok" ]; then
+            echo "✅ ${{ steps.add.outputs.message }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "❌ ${{ steps.add.outputs.message }}" >> "$GITHUB_STEP_SUMMARY"
+          fi

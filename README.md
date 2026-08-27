@@ -46,12 +46,22 @@ scripts/add_product.py               -> parses a new-item issue into products.js
    use that as `SMTP_PASSWORD`. Any SMTP provider works (Outlook, Fastmail,
    SendGrid's SMTP relay, etc.) — just point `SMTP_SERVER`/`SMTP_PORT` at it.
 
-3. **Add products to track**, either way:
+3. **Add products to track**, any of these ways:
 
-   - **Issue form (recommended, works from your phone too):** go to the
-     Issues tab → New Issue → "Add a product to track" → paste the Amazon
-     link → Submit. Within a minute or two a bot adds it to `products.json`,
-     comments to confirm, and closes the issue.
+   - **Standalone link (no title field, just the link):** go to the
+     [Actions tab → "Add product" → Run
+     workflow](../../actions/workflows/add-product.yml), paste the Amazon
+     link into the one field, and run it. Nothing else to fill in — the
+     product's name is fetched from the page automatically. Bookmark that
+     link for one-click adding later.
+   - **Issue form (works well from your phone, e.g. the Share sheet):** go
+     to the Issues tab → New Issue → "Add a product to track" → paste the
+     Amazon link → Submit. Note GitHub issues always require a title field
+     — that's a GitHub platform requirement with no way to turn off — but
+     you can leave it as the pre-filled default, it's never read; the name
+     comes from the product page instead. A bot files the link into
+     `products.json`, renames the issue to match the product, comments to
+     confirm, and closes it.
    - **Edit `products.json` directly** — useful for bulk-adding:
 
      ```json
@@ -63,8 +73,9 @@ scripts/add_product.py               -> parses a new-item issue into products.js
      }
      ```
 
-4. **Run it.** It runs automatically every 6 hours. To check right away:
-   Actions tab → "Check prices" → Run workflow.
+4. **Run it.** It runs automatically (every 6 hours by default — see
+   "Changing the check frequency" below). To check right away: Actions tab
+   → "Check prices" → Run workflow.
 
 ## Wishlist tracking — a heads-up
 
@@ -116,12 +127,27 @@ If this blocking makes it too unreliable for your needs, two ways to fix it:
 
 ## Changing the check frequency
 
-Edit the `cron` line in `.github/workflows/check-prices.yml`. It uses
-standard cron syntax evaluated in UTC, e.g.:
+The "Check prices" workflow itself polls every hour, but it only actually
+checks prices once `check_interval_hours` worth of time has passed since
+the last real check — that number lives in `products.json`:
 
-- `"0 */6 * * *"` — every 6 hours (default)
-- `"0 8,20 * * *"` — twice a day, 8am and 8pm UTC
-- `"0 */1 * * *"` — every hour (more likely to get rate-limited — see above)
+```json
+{
+  "check_interval_hours": 6,
+  "wishlists": [],
+  "products": [...]
+}
+```
+
+Change it there (e.g. to `1` for hourly, `24` for daily, or `0.5` for
+every 30 minutes), commit, and it takes effect on the very next hourly
+poll — no cron syntax, no editing the workflow file. Every run where it
+decides to skip is nearly instant and makes zero requests to Amazon, so
+polling hourly costs nothing extra. If you want checks less often than
+once an hour and don't want the extra no-op runs cluttering the Actions
+tab, you can instead lower the polling cron itself in
+`.github/workflows/check-prices.yml` (standard 5-field cron, evaluated in
+UTC) — e.g. `"0 */6 * * *"` for every 6 hours.
 
 ## Pushing this to GitHub
 

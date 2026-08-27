@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-Parses the body of a GitHub Issue opened via the "Add a product to track"
-issue form (.github/ISSUE_TEMPLATE/add-product.yml) and appends the link
-to products.json.
+Adds an Amazon product/wishlist link to products.json. The link can come
+from two places, checked in this order:
 
-Run by .github/workflows/add-product.yml whenever a new issue with the
-"add-product" label is opened. Expects the issue body in the ISSUE_BODY
-environment variable.
+1. The PRODUCT_LINK environment variable - set when the workflow is run
+   manually via "Run workflow" (workflow_dispatch), which only asks for
+   the link itself, no issue/title involved.
+2. The ISSUE_BODY environment variable - the body of a GitHub Issue
+   opened via the "Add a product to track" issue form
+   (.github/ISSUE_TEMPLATE/add-product.yml). Issues always require a
+   title (a GitHub platform requirement, can't be turned off), but
+   nothing reads it - the product's name comes from the page itself.
+
+Run by .github/workflows/add-product.yml.
 
 Writes GITHUB_OUTPUT keys `status` (ok|error), `message` (human-readable
-result), and `name` (the product/wishlist name) so the workflow can post a
-comment back on the issue.
+result), and `name` (the product/wishlist name).
 """
 
 import json
@@ -49,9 +54,25 @@ def shorten(text, max_len=MAX_NAME_LENGTH):
     return (truncated or text[:max_len]).rstrip(",.-") + "..."
 
 
+SLUG_PATTERN = re.compile(r"/([A-Za-z0-9][A-Za-z0-9-]{9,})/(?:dp|gp/product)/", re.IGNORECASE)
+GENERIC_SLUG_WORDS = {"dp", "gp", "product", "the", "and"}
+
+
 def guess_name_from_url(url):
-    match = ASIN_PATTERN.search(url)
-    return f"Amazon item {match.group(1)}" if match else "Amazon item"
+    """
+    Best-effort name when the live page fetch didn't work. Amazon URLs
+    often carry a readable product slug right before /dp/, e.g.
+    amazon.com/Sony-WH-1000XM4-Wireless-Headphones/dp/B0863TXGM3 - use
+    that if present, since it's usually far more useful than a bare ASIN.
+    """
+    slug_match = SLUG_PATTERN.search(url)
+    if slug_match:
+        words = [w for w in slug_match.group(1).split("-") if w.lower() not in GENERIC_SLUG_WORDS]
+        if words:
+            return shorten(" ".join(words))
+
+    asin_match = ASIN_PATTERN.search(url)
+    return f"Amazon item {asin_match.group(1)}" if asin_match else "Amazon item"
 
 
 def fetch_product_name(url):
@@ -114,11 +135,16 @@ def write_output(status, message, name=""):
 
 
 def main():
-    body = os.environ.get("ISSUE_BODY", "")
-    fields = parse_issue_form(body)
+    direct_link = os.environ.get("PRODUCT_LINK", "").strip()
 
-    link = fields.get("amazon product link") or fields.get("amazon link") or ""
-    nickname = fields.get("nickname (optional)") or fields.get("nickname") or ""
+    if direct_link:
+        link = direct_link
+        nickname = os.environ.get("PRODUCT_NICKNAME", "").strip()
+    else:
+        body = os.environ.get("ISSUE_BODY", "")
+        fields = parse_issue_form(body)
+        link = fields.get("amazon product link") or fields.get("amazon link") or ""
+        nickname = fields.get("nickname (optional)") or fields.get("nickname") or ""
 
     if not link:
         write_output("error", "No Amazon link was found in the issue body. Please use the 'Add a product to track' issue form.")

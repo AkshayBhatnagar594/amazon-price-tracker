@@ -1,6 +1,8 @@
 {
+  "check_interval_hours": 6,
   "products": [
     {
+      "name": "Modern Pendant Light",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     }
   ],

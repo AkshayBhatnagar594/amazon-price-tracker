@@ -2,8 +2,11 @@ name: Check prices
 
 on:
   schedule:
-    # Every 6 hours. GitHub Actions cron runs in UTC.
-    - cron: "0 */6 * * *"
+    # Polls hourly, but scripts/check_prices.py only actually runs a check
+    # once "check_interval_hours" worth of time has passed since the last
+    # one (see products.json) - so the real interval is controlled there,
+    # not here. GitHub Actions cron runs in UTC.
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:

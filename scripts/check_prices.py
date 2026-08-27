@@ -40,6 +40,7 @@ HEADERS = {
 
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 3  # be polite between requests
+DEFAULT_CHECK_INTERVAL_HOURS = 6
 
 PRICE_SELECTORS = [
     "span.a-price span.a-offscreen",
@@ -215,8 +216,43 @@ def send_email(changes):
         print(f"  [error] failed to send email: {e}")
 
 
+def should_run_now(products_config):
+    """
+    The workflow itself polls hourly, but the *effective* check interval
+    is controlled by "check_interval_hours" in products.json (default 6)
+    so it can be changed just by editing a number and pushing - no cron
+    syntax, and it takes effect on the very next hourly poll instead of
+    needing a workflow file change.
+    """
+    interval_hours = products_config.get("check_interval_hours", DEFAULT_CHECK_INTERVAL_HOURS)
+    try:
+        interval_hours = float(interval_hours)
+    except (TypeError, ValueError):
+        interval_hours = DEFAULT_CHECK_INTERVAL_HOURS
+
+    last_run = load_json(LAST_RUN_FILE, {})
+    last_timestamp = last_run.get("timestamp")
+    if not last_timestamp:
+        return True, interval_hours
+
+    try:
+        last_dt = datetime.fromisoformat(last_timestamp)
+    except ValueError:
+        return True, interval_hours
+
+    elapsed_hours = (datetime.now(timezone.utc) - last_dt).total_seconds() / 3600
+    return elapsed_hours >= interval_hours, interval_hours
+
+
 def main():
     products_config = load_json(PRODUCTS_FILE, {"wishlists": [], "products": []})
+
+    run_now, interval_hours = should_run_now(products_config)
+    if not run_now:
+        print(f"Skipping - check_interval_hours is {interval_hours}, last check was more recent than that.")
+        print("Edit \"check_interval_hours\" in products.json to change this.")
+        return
+
     history = load_json(HISTORY_FILE, {})
     latest = load_json(LATEST_FILE, {})
 
