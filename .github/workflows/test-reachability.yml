@@ -1,0 +1,40 @@
+name: Test reachability (temporary)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check camelcamelcamel + keepa reachability
+        run: |
+          echo "## Reachability test" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "### camelcamelcamel.com homepage" >> "$GITHUB_STEP_SUMMARY"
+          CODE=$(curl -s -o /tmp/home.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/" || echo "FAIL")
+          echo "HTTP status: $CODE" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          head -c 500 /tmp/home.html >> "$GITHUB_STEP_SUMMARY" || true
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+          echo "### camelcamelcamel product page (Modern Pendant Light, B0CYZFHWMY)" >> "$GITHUB_STEP_SUMMARY"
+          CODE2=$(curl -s -o /tmp/product.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/product/B0CYZFHWMY" || echo "FAIL")
+          echo "HTTP status: $CODE2" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          head -c 800 /tmp/product.html >> "$GITHUB_STEP_SUMMARY" || true
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+          echo "### camelcamelcamel product page (known popular ASIN, B00FLYWNYQ - Amazon Basics batteries)" >> "$GITHUB_STEP_SUMMARY"
+          CODE3=$(curl -s -o /tmp/product2.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://camelcamelcamel.com/product/B00FLYWNYQ" || echo "FAIL")
+          echo "HTTP status: $CODE3" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          head -c 800 /tmp/product2.html >> "$GITHUB_STEP_SUMMARY" || true
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+          echo "### keepa.com homepage (paid API alternative)" >> "$GITHUB_STEP_SUMMARY"
+          CODE4=$(curl -s -o /tmp/keepa.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" "https://keepa.com/" || echo "FAIL")
+          echo "HTTP status: $CODE4" >> "$GITHUB_STEP_SUMMARY"
