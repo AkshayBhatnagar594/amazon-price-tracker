@@ -89,15 +89,30 @@ caveats worth knowing:
   (checking a handful of items every few hours) — not for anything at
   scale. Use it at your own discretion.
 - **It's fragile.** If Amazon changes their page layout, the CSS selectors
-  in `scripts/check_prices.py` (`PRICE_SELECTORS`) may need updating. If
-  you check too frequently or from a flagged IP (GitHub's shared runners
-  can occasionally get rate-limited), Amazon may serve a CAPTCHA page
-  instead of the real one — the script detects this, logs a warning, and
-  skips that item for the run rather than failing.
+  in `scripts/check_prices.py` (`PRICE_SELECTORS`) may need updating.
+- **GitHub-hosted runners often get soft-blocked.** Amazon's anti-bot
+  system flags most cloud datacenter IP ranges, GitHub Actions included.
+  In practice this means a check run frequently gets served a generic
+  "Continue shopping" interstitial or a CAPTCHA instead of the real page.
+  The script detects this, logs it, and skips that item for the run
+  rather than failing — check `data/last_run.json` after any run to see
+  exactly what happened per item (`status`: `ok`, `captcha`,
+  `no_price_found`, or `request_error`, plus a `detail` with a snippet of
+  what Amazon actually returned). Because GitHub assigns a fresh runner
+  (and IP) to each run, results can vary run to run — some checks will get
+  through, some won't.
 
-If you'd rather not scrape at all, a paid API like
-[Keepa](https://keepa.com/#!api) provides Amazon price history officially
-and could be swapped in for `check_product()`/`check_wishlist()`.
+If this blocking makes it too unreliable for your needs, two ways to fix it:
+
+- **Run it on a self-hosted runner** instead of GitHub's shared ones —
+  e.g. a small always-on machine on your home network. A residential IP is
+  far less likely to be flagged. See [GitHub's self-hosted runner
+  docs](https://docs.github.com/actions/hosting-your-own-runners) and
+  change `runs-on: ubuntu-latest` to `runs-on: self-hosted` in
+  `.github/workflows/check-prices.yml`.
+- **Use a paid API instead of scraping** — [Keepa](https://keepa.com/#!api)
+  provides Amazon price history officially and could be swapped in for
+  `check_product()`/`check_wishlist()`.
 
 ## Changing the check frequency
 
