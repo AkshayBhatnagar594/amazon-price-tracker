@@ -247,11 +247,14 @@ def should_run_now(products_config):
 def main():
     products_config = load_json(PRODUCTS_FILE, {"wishlists": [], "products": []})
 
+    forced = os.environ.get("FORCE_CHECK", "").lower() == "true"
     run_now, interval_hours = should_run_now(products_config)
-    if not run_now:
+    if not run_now and not forced:
         print(f"Skipping - check_interval_hours is {interval_hours}, last check was more recent than that.")
-        print("Edit \"check_interval_hours\" in products.json to change this.")
+        print("Edit \"check_interval_hours\" in products.json to change this, or run this workflow manually to check immediately regardless of the interval.")
         return
+    if forced and not run_now:
+        print("FORCE_CHECK is set (manual run) - checking now even though the interval hasn't elapsed.")
 
     history = load_json(HISTORY_FILE, {})
     latest = load_json(LATEST_FILE, {})

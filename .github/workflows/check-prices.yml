@@ -31,6 +31,7 @@ jobs:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          FORCE_CHECK: ${{ github.event_name == 'workflow_dispatch' }}
         run: python scripts/check_prices.py
 
       - name: Commit updated price history
