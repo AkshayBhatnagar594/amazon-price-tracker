@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: "3.12"
 
+      - run: pip install -r requirements.txt
+
       - name: Parse issue and update products.json
         id: add
         env:
@@ -33,6 +35,13 @@ jobs:
           git add products.json
           git commit -m "Add ${{ steps.add.outputs.name }} via issue #${{ github.event.issue.number }}"
           git push
+
+      - name: Rename issue to match the product
+        if: steps.add.outputs.status == 'ok'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue edit ${{ github.event.issue.number }} --title "Track: ${{ steps.add.outputs.name }}"
 
       - name: Comment and close on success
         if: steps.add.outputs.status == 'ok'
