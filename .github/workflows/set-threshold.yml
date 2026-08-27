@@ -1,0 +1,50 @@
+name: Set price alert threshold
+
+on:
+  workflow_dispatch:
+    inputs:
+      product_link:
+        description: "The tracked Amazon URL this threshold applies to"
+        required: true
+        type: string
+      threshold_percent:
+        description: "Alert when price is within this % of its all-time low (blank to clear)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  set-threshold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update threshold
+        id: set
+        env:
+          PRODUCT_LINK: ${{ github.event.inputs.product_link }}
+          THRESHOLD_PERCENT: ${{ github.event.inputs.threshold_percent }}
+        run: python scripts/set_threshold.py
+
+      - name: Commit updated products.json
+        if: steps.set.outputs.status == 'ok'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add products.json
+          git diff --cached --quiet || git commit -m "Update threshold: ${{ steps.set.outputs.message }}"
+          git diff --cached --quiet || git push
+
+      - name: Write run summary
+        run: |
+          if [ "${{ steps.set.outputs.status }}" = "ok" ]; then
+            echo "✅ ${{ steps.set.outputs.message }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "❌ ${{ steps.set.outputs.message }}" >> "$GITHUB_STEP_SUMMARY"
+          fi

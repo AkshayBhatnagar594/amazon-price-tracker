@@ -196,7 +196,13 @@ def send_email(changes):
         direction = "UP" if c["new_price"] > (c["old_price"] or 0) else "DOWN"
         old = f"${c['old_price']:.2f}" if c["old_price"] is not None else "unknown"
         new = f"${c['new_price']:.2f}"
-        lines.append(f"[{direction}] {c['name']}\n  {old} -> {new}\n  {c['url']}\n")
+        tag = ""
+        if c.get("lowest_ever") is not None:
+            if c["new_price"] <= c["lowest_ever"]:
+                tag = " (new all-time low!)"
+            else:
+                tag = f" (within threshold of the all-time low of ${c['lowest_ever']:.2f})"
+        lines.append(f"[{direction}] {c['name']}{tag}\n  {old} -> {new}\n  {c['url']}\n")
 
     body = "Price changes detected:\n\n" + "\n".join(lines)
 
@@ -214,6 +220,35 @@ def send_email(changes):
         print(f"  [ok] email sent to {email_to}")
     except smtplib.SMTPException as e:
         print(f"  [error] failed to send email: {e}")
+
+
+def should_alert(price, old_price, prior_history, threshold_percent):
+    """
+    Decides whether a price is worth emailing about.
+
+    - No prior price at all -> never (this is the first successful check
+      for this item, there's nothing to compare against yet).
+    - No threshold configured for this URL -> alert on any change from
+      the immediately previous check (the original, simple behavior).
+    - A threshold is configured -> alert only when the new price is at or
+      within threshold_percent of the lowest price ever recorded for this
+      item ("this is basically the best price ever" deal alert), instead
+      of on every small fluctuation.
+
+    Returns (should_alert, lowest_ever_or_None).
+    """
+    if old_price is None:
+        return False, None
+
+    if threshold_percent is None:
+        return old_price != price, None
+
+    prior_prices = [h["price"] for h in prior_history if h.get("price") is not None]
+    if not prior_prices:
+        return False, None
+
+    lowest_ever = min(prior_prices)
+    return price <= lowest_ever * (1 + threshold_percent / 100), lowest_ever
 
 
 def should_run_now(products_config):
@@ -258,6 +293,7 @@ def main():
 
     history = load_json(HISTORY_FILE, {})
     latest = load_json(LATEST_FILE, {})
+    thresholds = products_config.get("thresholds", {})
 
     now = datetime.now(timezone.utc).isoformat()
     changes = []
@@ -279,8 +315,9 @@ def main():
             continue
 
         old_price = latest.get(norm_url, {}).get("price")
-        if old_price is not None and old_price != price:
-            changes.append({"name": name, "url": norm_url, "old_price": old_price, "new_price": price})
+        alert, lowest_ever = should_alert(price, old_price, history.get(norm_url, []), thresholds.get(norm_url))
+        if alert:
+            changes.append({"name": name, "url": norm_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
         history.setdefault(norm_url, []).append({"date": now, "price": price})
         latest[norm_url] = {"name": name, "price": price, "last_checked": now}
@@ -300,8 +337,9 @@ def main():
                 continue
 
             old_price = latest.get(product_url, {}).get("price")
-            if old_price is not None and old_price != price:
-                changes.append({"name": name, "url": product_url, "old_price": old_price, "new_price": price})
+            alert, lowest_ever = should_alert(price, old_price, history.get(product_url, []), thresholds.get(product_url))
+            if alert:
+                changes.append({"name": name, "url": product_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
             history.setdefault(product_url, []).append({"date": now, "price": price})
             latest[product_url] = {"name": name, "price": price, "last_checked": now}

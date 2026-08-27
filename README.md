@@ -5,24 +5,72 @@ wishlist) and emails you when a price changes. Runs entirely on GitHub
 Actions — no server to host.
 
 - **Checks prices every 6 hours** via a scheduled GitHub Actions workflow.
-- **Add new items through a GitHub Issue form** — no need to edit code or
-  files by hand. Open an issue, paste a link, submit; a bot files it into
-  `products.json`, comments to confirm, and closes the issue.
-- **Emails you** when a tracked item's price goes up or down.
+- **A live web page** (GitHub Pages) lists everything tracked, with buttons
+  to check prices right now, add a new link, and set a per-item price-drop
+  alert threshold — all without leaving the page. See "The price table
+  page" below.
+- **Add new items** through that page, a title-free GitHub Actions form, or
+  a GitHub Issue form — whichever's convenient.
+- **Emails you** when a tracked item's price changes (or, if you've set a
+  threshold for it, only when it's near its all-time low).
 - **Keeps full price history** in `data/history.json`, committed back to
   the repo on every run.
 
 ## How it works
 
 ```
-.github/workflows/check-prices.yml   -> runs scripts/check_prices.py every 6h
-.github/workflows/add-product.yml    -> runs scripts/add_product.py when you open an "add a product" issue
-.github/ISSUE_TEMPLATE/add-product.yml -> the issue form ("dialog") you use to add links
-products.json                        -> the list of things being tracked
-data/history.json                    -> every price ever recorded, per item
-data/latest.json                     -> the most recent known price per item
-scripts/check_prices.py              -> scraper + email sender
-scripts/add_product.py               -> parses a new-item issue into products.json
+.github/workflows/check-prices.yml     -> runs scripts/check_prices.py hourly (see check_interval_hours)
+.github/workflows/add-product.yml      -> runs scripts/add_product.py from an issue OR a manual "Run workflow"
+.github/workflows/set-threshold.yml    -> runs scripts/set_threshold.py to set/clear a price-alert threshold
+.github/ISSUE_TEMPLATE/add-product.yml -> the issue form you can use to add links
+index.html                             -> the live price table page (GitHub Pages)
+products.json                          -> the list of things being tracked + settings
+data/history.json                      -> every price ever recorded, per item
+data/latest.json                       -> the most recent known price per item
+data/last_run.json                     -> per-item diagnostics from the last check
+scripts/check_prices.py                -> scraper + email sender
+scripts/add_product.py                 -> parses a new product/wishlist link into products.json
+scripts/set_threshold.py               -> sets/clears a per-item alert threshold
+```
+
+## The price table page
+
+Once GitHub Pages is enabled (see setup below), the table lives at
+`https://<your-username>.github.io/<repo-name>/`. It's read-only by
+default; connecting a token unlocks three things right from the page:
+
+- **"Check prices now"** — triggers a real check immediately (bypasses
+  `check_interval_hours`), waits for it to finish, and refreshes the table.
+- **The add-link box** — paste an Amazon link, click Add. Same auto-naming
+  as the other add methods, no issue or title involved.
+- **Per-item "Alert near low"** — type a percentage and click Set. See
+  "Setting a price-drop threshold" below for what it means.
+
+These need a GitHub token because the page is static (no backend) — click
+**Connect** and follow the in-page instructions to create a
+**fine-grained personal access token** scoped to just this repo with
+**Actions: Read and write** permission (nothing else). It's stored only in
+your browser's `localStorage`, never sent anywhere but GitHub's API
+directly from your browser. Revoke it anytime at
+[github.com/settings/tokens](https://github.com/settings/tokens) if you
+ever want to.
+
+## Setting a price-drop threshold
+
+By default, any tracked item alerts you on **any** price change, up or
+down. If that's too noisy, set a threshold (via the table page, or by
+editing `products.json`'s `thresholds` object directly) — e.g. `10` means
+"only email me when the price is at or within 10% of the lowest price
+ever recorded for this item." A brand new all-time low always alerts
+regardless of the threshold value. Clear the input (or set it via the
+page with a blank value) to go back to alerting on any change.
+
+```json
+{
+  "thresholds": {
+    "https://www.amazon.com/dp/B0XXXXXXXX/": 10
+  }
+}
 ```
 
 ## Setup
@@ -48,6 +96,8 @@ scripts/add_product.py               -> parses a new-item issue into products.js
 
 3. **Add products to track**, any of these ways:
 
+   - **The price table page** — paste the link into the add box and click
+     Add (needs a connected token — see "The price table page" below).
    - **Standalone link (no title field, just the link):** go to the
      [Actions tab → "Add product" → Run
      workflow](../../actions/workflows/add-product.yml), paste the Amazon

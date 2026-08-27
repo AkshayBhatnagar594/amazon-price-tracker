@@ -18,6 +18,8 @@
     --pill-up-bg: #fee2e2;
     --pill-up-fg: #991b1b;
     --accent: #1a5fb4;
+    --input-bg: #ffffff;
+    --card-bg: #f9fafb;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -32,6 +34,8 @@
       --pill-up-bg: #3a1414;
       --pill-up-fg: #ff9b9b;
       --accent: #7cb0ff;
+      --input-bg: #1c1f24;
+      --card-bg: #1c1f24;
     }
   }
   * { box-sizing: border-box; }
@@ -44,27 +48,64 @@
   }
   .wrap { max-width: 900px; margin: 0 auto; }
   h1 { font-size: 1.5rem; margin: 0 0 0.25rem; }
-  .subtitle { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.5rem; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.25rem; }
   .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
-  .add-link {
-    display: inline-block;
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     background: var(--accent);
     color: #fff;
     text-decoration: none;
+    border: none;
     padding: 0.55rem 1rem;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
   }
-  .add-link:hover { opacity: 0.9; }
+  .btn:hover { opacity: 0.9; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn.secondary {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+  }
+  .btn.small { padding: 0.35rem 0.65rem; font-size: 0.8rem; }
   #updated { color: var(--muted); font-size: 0.85rem; }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .add-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .add-row input[type="text"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.55rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--fg);
+    font-size: 0.9rem;
+  }
+  .card-hint { color: var(--muted); font-size: 0.8rem; margin: 0.5rem 0 0; }
+  .card-hint a { color: var(--link); }
+  .status-line { font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.2em; }
+  .status-line.err { color: var(--pill-up-fg); }
+  .status-line.ok { color: var(--pill-down-fg); }
+
   table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
   thead th {
     text-align: left;
@@ -86,18 +127,9 @@
   .price { font-variant-numeric: tabular-nums; white-space: nowrap; }
   .pending { color: var(--muted); font-style: italic; }
   .checked { color: var(--muted); white-space: nowrap; font-size: 0.85rem; }
-  .buy-link {
-    color: var(--link);
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-  }
+  .buy-link { color: var(--link); text-decoration: none; font-weight: 600; white-space: nowrap; }
   .buy-link:hover { text-decoration: underline; }
-  .empty {
-    text-align: center;
-    padding: 3rem 1rem;
-    color: var(--muted);
-  }
+  .empty { text-align: center; padding: 3rem 1rem; color: var(--muted); }
   .error {
     background: var(--pill-up-bg);
     color: var(--pill-up-fg);
@@ -106,9 +138,55 @@
     margin-bottom: 1rem;
     font-size: 0.9rem;
   }
-  @media (max-width: 640px) {
+  .threshold-form { display: flex; align-items: center; gap: 0.35rem; }
+  .threshold-form input {
+    width: 4.5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--fg);
+    font-size: 0.85rem;
+  }
+  .threshold-form .pct { color: var(--muted); font-size: 0.85rem; }
+
+  @media (max-width: 700px) {
     .checked { display: none; }
   }
+  @media (max-width: 560px) {
+    .threshold-col { display: none; }
+  }
+
+  /* Connect-token modal */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1rem; z-index: 10;
+  }
+  .modal {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 440px;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .modal h2 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+  .modal p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; margin: 0 0 0.75rem; }
+  .modal ol { font-size: 0.85rem; color: var(--muted); line-height: 1.6; padding-left: 1.2rem; margin: 0 0 1rem; }
+  .modal a { color: var(--link); }
+  .modal input[type="password"] {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--fg);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+  .hidden { display: none; }
 </style>
 </head>
 <body>
@@ -117,21 +195,84 @@
   <p class="subtitle">Live view of everything currently being tracked. Updates automatically every 6 hours.</p>
 
   <div class="toolbar">
-    <a class="add-link" id="add-link" href="#" target="_blank" rel="noopener">+ Add a product to track</a>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+      <button class="btn" id="check-now-btn">Check prices now</button>
+      <button class="btn secondary" id="connect-btn">Connect</button>
+    </div>
     <span id="updated"></span>
+  </div>
+  <div class="status-line" id="check-status"></div>
+
+  <div class="card">
+    <div class="add-row">
+      <input type="text" id="add-link-input" placeholder="Paste an Amazon product or wishlist link…">
+      <button class="btn" id="add-link-btn">Add</button>
+    </div>
+    <p class="card-hint">
+      Auto-names itself from the product page. Prefer GitHub's own form? <a id="issue-form-link" href="#" target="_blank" rel="noopener">Use the issue form instead</a>.
+    </p>
+    <div class="status-line" id="add-status"></div>
   </div>
 
   <div id="error-box"></div>
   <div id="content">Loading…</div>
 </div>
 
+<div class="modal-overlay hidden" id="modal-overlay">
+  <div class="modal">
+    <h2 id="modal-title">Connect a GitHub token</h2>
+    <p>
+      This page has no backend, so triggering checks, adding products, and
+      setting alert thresholds needs a token your browser can use to call
+      GitHub's API directly. It's stored only in this browser
+      (localStorage) — never sent anywhere else.
+    </p>
+    <ol>
+      <li>Go to <a id="token-create-link" href="#" target="_blank" rel="noopener">github.com → Settings → Developer settings → Fine-grained tokens → Generate new token</a></li>
+      <li>Under "Repository access", choose <strong>Only select repositories</strong> → this repo</li>
+      <li>Under "Permissions" → "Repository permissions", set <strong>Actions</strong> to <strong>Read and write</strong> (nothing else is needed)</li>
+      <li>Generate, copy the token, and paste it below</li>
+    </ol>
+    <input type="password" id="token-input" placeholder="github_pat_…" autocomplete="off">
+    <div class="modal-actions">
+      <button class="btn secondary" id="modal-cancel-btn">Cancel</button>
+      <button class="btn secondary hidden" id="modal-disconnect-btn">Disconnect</button>
+      <button class="btn" id="modal-save-btn">Save</button>
+    </div>
+  </div>
+</div>
+
 <script>
   // Update these if the repo is ever renamed/forked.
   const OWNER = "AkshayBhatnagar594";
   const REPO = "amazon-price-tracker";
+  const GH_API = "https://api.github.com";
+  const TOKEN_KEY = "ghPatToken";
 
-  document.getElementById("add-link").href =
+  document.getElementById("issue-form-link").href =
     `https://github.com/${OWNER}/${REPO}/issues/new?template=add-product.yml`;
+  document.getElementById("token-create-link").href =
+    "https://github.com/settings/personal-access-tokens/new";
+
+  // ---------- token storage ----------
+  function getToken() {
+    try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; }
+  }
+  function setToken(t) {
+    try {
+      if (t) localStorage.setItem(TOKEN_KEY, t);
+      else localStorage.removeItem(TOKEN_KEY);
+    } catch (e) { /* private browsing etc - silently no-op */ }
+  }
+
+  // ---------- small helpers ----------
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
 
   function fmtPrice(price) {
     if (price === null || price === undefined) return null;
@@ -151,12 +292,239 @@
     return `${days}d ago`;
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
+  // ---------- GitHub API ----------
+  async function ghApi(path, options = {}) {
+    const token = getToken();
+    const headers = Object.assign(
+      {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      options.headers || {}
+    );
+    if (token) headers["Authorization"] = "token " + token;
+    return fetch(GH_API + path, Object.assign({}, options, { headers }));
   }
 
+  async function apiErrorMessage(res) {
+    try {
+      const j = await res.json();
+      if (j && j.message) return j.message;
+    } catch (e) { /* ignore */ }
+    return "HTTP " + res.status;
+  }
+
+  async function dispatchWorkflow(file, inputs) {
+    const res = await ghApi(`/repos/${OWNER}/${REPO}/actions/workflows/${file}/dispatches`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ref: "main", inputs: inputs || {} }),
+    });
+    if (res.status === 401 || res.status === 403) {
+      throw new Error("Token rejected (" + res.status + "). It may be expired, wrong repo, or missing the Actions: Read and write permission.");
+    }
+    if (res.status !== 204) {
+      throw new Error(await apiErrorMessage(res));
+    }
+  }
+
+  async function findNewRun(file, sinceMs) {
+    const res = await ghApi(`/repos/${OWNER}/${REPO}/actions/workflows/${file}/runs?event=workflow_dispatch&per_page=5`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const runs = (data.workflow_runs || []).filter(r => new Date(r.created_at).getTime() >= sinceMs - 5000);
+    if (runs.length === 0) return null;
+    runs.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    return runs[0];
+  }
+
+  /**
+   * Dispatches a workflow and polls until that run finishes.
+   * onStatus(text) is called with human-readable progress updates.
+   * Returns { ok: true, run } or { ok: false, error, run? }.
+   */
+  async function runWorkflowAndWait(file, inputs, onStatus) {
+    if (!getToken()) {
+      openModal();
+      throw new Error("Connect a token first.");
+    }
+
+    const dispatchedAtMs = Date.now();
+    onStatus("Starting…");
+    await dispatchWorkflow(file, inputs);
+
+    onStatus("Waiting for it to start…");
+    let run = null;
+    const findDeadline = Date.now() + 30000;
+    while (Date.now() < findDeadline && !run) {
+      await sleep(2500);
+      run = await findNewRun(file, dispatchedAtMs);
+    }
+    if (!run) {
+      return { ok: false, error: "Couldn't find the run - it may still be queued. Check the Actions tab." };
+    }
+
+    onStatus("Running…");
+    const runDeadline = Date.now() + 120000;
+    while (run.status !== "completed" && Date.now() < runDeadline) {
+      await sleep(4000);
+      const res = await ghApi(`/repos/${OWNER}/${REPO}/actions/runs/${run.id}`);
+      if (res.ok) run = await res.json();
+    }
+
+    if (run.status !== "completed") {
+      return { ok: false, error: "Taking longer than expected. Check the Actions tab.", run };
+    }
+    if (run.conclusion !== "success") {
+      return { ok: false, error: `Run finished with "${run.conclusion}". Check the Actions tab for details.`, run };
+    }
+
+    onStatus("Waiting for the page to update…");
+    await waitForPagesDeploy(dispatchedAtMs);
+
+    return { ok: true, run };
+  }
+
+  async function waitForPagesDeploy(afterMs) {
+    const deadline = Date.now() + 90000;
+    while (Date.now() < deadline) {
+      try {
+        const res = await ghApi(`/repos/${OWNER}/${REPO}/pages/builds/latest`);
+        if (res.ok) {
+          const build = await res.json();
+          if (build.status === "built" && new Date(build.created_at).getTime() >= afterMs - 5000) {
+            return true;
+          }
+        }
+      } catch (e) { /* ignore transient errors and keep polling */ }
+      await sleep(4000);
+    }
+    return false; // give up waiting, caller still refreshes with whatever is live
+  }
+
+  // ---------- modal ----------
+  function openModal() {
+    const connected = !!getToken();
+    document.getElementById("modal-title").textContent = connected ? "Manage GitHub token" : "Connect a GitHub token";
+    document.getElementById("modal-disconnect-btn").classList.toggle("hidden", !connected);
+    document.getElementById("token-input").value = "";
+    document.getElementById("modal-overlay").classList.remove("hidden");
+    document.getElementById("token-input").focus();
+  }
+  function closeModal() {
+    document.getElementById("modal-overlay").classList.add("hidden");
+  }
+  function updateConnectButton() {
+    const btn = document.getElementById("connect-btn");
+    btn.textContent = getToken() ? "✓ Connected" : "Connect";
+  }
+
+  document.getElementById("connect-btn").addEventListener("click", openModal);
+  document.getElementById("modal-cancel-btn").addEventListener("click", closeModal);
+  document.getElementById("modal-overlay").addEventListener("click", (e) => {
+    if (e.target.id === "modal-overlay") closeModal();
+  });
+  document.getElementById("modal-save-btn").addEventListener("click", () => {
+    const val = document.getElementById("token-input").value.trim();
+    if (val) setToken(val);
+    updateConnectButton();
+    closeModal();
+  });
+  document.getElementById("modal-disconnect-btn").addEventListener("click", () => {
+    setToken("");
+    updateConnectButton();
+    closeModal();
+  });
+
+  // ---------- check now ----------
+  document.getElementById("check-now-btn").addEventListener("click", async () => {
+    const btn = document.getElementById("check-now-btn");
+    const statusEl = document.getElementById("check-status");
+    statusEl.className = "status-line";
+    btn.disabled = true;
+    try {
+      const result = await runWorkflowAndWait("check-prices.yml", {}, (t) => { statusEl.textContent = t; });
+      if (result.ok) {
+        statusEl.textContent = "Done ✅";
+        statusEl.className = "status-line ok";
+        await load();
+      } else {
+        statusEl.textContent = result.error;
+        statusEl.className = "status-line err";
+      }
+    } catch (e) {
+      statusEl.textContent = String(e.message || e);
+      statusEl.className = "status-line err";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  // ---------- add product ----------
+  document.getElementById("add-link-btn").addEventListener("click", async () => {
+    const input = document.getElementById("add-link-input");
+    const btn = document.getElementById("add-link-btn");
+    const statusEl = document.getElementById("add-status");
+    const link = input.value.trim();
+    statusEl.className = "status-line";
+
+    if (!link) {
+      statusEl.textContent = "Paste a link first.";
+      statusEl.className = "status-line err";
+      return;
+    }
+
+    btn.disabled = true;
+    try {
+      const result = await runWorkflowAndWait("add-product.yml", { product_link: link, nickname: "" }, (t) => { statusEl.textContent = t; });
+      if (result.ok) {
+        statusEl.textContent = "Added ✅";
+        statusEl.className = "status-line ok";
+        input.value = "";
+        await load();
+      } else {
+        statusEl.textContent = result.error;
+        statusEl.className = "status-line err";
+      }
+    } catch (e) {
+      statusEl.textContent = String(e.message || e);
+      statusEl.className = "status-line err";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+  document.getElementById("add-link-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") document.getElementById("add-link-btn").click();
+  });
+
+  // ---------- set threshold (delegated - rows are re-rendered) ----------
+  document.getElementById("content").addEventListener("click", async (e) => {
+    const btn = e.target.closest(".threshold-set-btn");
+    if (!btn) return;
+
+    const row = btn.closest("tr");
+    const url = row.dataset.url;
+    const input = row.querySelector(".threshold-input");
+    const statusEl = row.querySelector(".threshold-status");
+    const value = input.value.trim();
+
+    btn.disabled = true;
+    if (statusEl) statusEl.textContent = "…";
+    try {
+      const result = await runWorkflowAndWait("set-threshold.yml", { product_link: url, threshold_percent: value }, (t) => { if (statusEl) statusEl.textContent = t; });
+      if (result.ok) {
+        await load();
+      } else if (statusEl) {
+        statusEl.textContent = result.error;
+      }
+    } catch (err) {
+      if (statusEl) statusEl.textContent = String(err.message || err);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  // ---------- data loading + rendering ----------
   async function fetchJson(path, fallback) {
     try {
       const res = await fetch(path + "?_=" + Date.now());
@@ -169,22 +537,18 @@
 
   async function load() {
     const [products, latest] = await Promise.all([
-      fetchJson("./products.json", { products: [], wishlists: [] }),
+      fetchJson("./products.json", { products: [], wishlists: [], thresholds: {} }),
       fetchJson("./data/latest.json", {}),
     ]);
 
-    // Merge: start from products.json (may not have a price yet),
-    // then overlay/extend with data/latest.json (has real prices, and
-    // includes items discovered via wishlists that aren't individually
-    // listed in products.json).
-    const rows = new Map();
+    const thresholds = products.thresholds || {};
 
+    const rows = new Map();
     for (const p of (products.products || [])) {
       const url = typeof p === "string" ? p : p.url;
       const name = typeof p === "string" ? url : (p.name || url);
       rows.set(url, { url, name, price: null, last_checked: null });
     }
-
     for (const [url, info] of Object.entries(latest || {})) {
       rows.set(url, {
         url,
@@ -194,15 +558,15 @@
       });
     }
 
-    renderTable(Array.from(rows.values()));
+    renderTable(Array.from(rows.values()), thresholds);
   }
 
-  function renderTable(items) {
+  function renderTable(items, thresholds) {
     const content = document.getElementById("content");
     const updated = document.getElementById("updated");
 
     if (items.length === 0) {
-      content.innerHTML = `<div class="empty">No items tracked yet. Click "+ Add a product to track" above to get started.</div>`;
+      content.innerHTML = `<div class="empty">No items tracked yet. Paste a link above to get started.</div>`;
       return;
     }
 
@@ -221,10 +585,20 @@
       const priceCell = priceStr
         ? `<span class="price">${priceStr}</span>`
         : `<span class="price pending">not checked yet</span>`;
+      const currentThreshold = thresholds[item.url];
+      const thresholdValueAttr = currentThreshold !== undefined ? ` value="${escapeHtml(String(currentThreshold))}"` : "";
       return `
-        <tr>
+        <tr data-url="${escapeHtml(item.url)}">
           <td class="name">${escapeHtml(item.name)}</td>
           <td>${priceCell}</td>
+          <td class="threshold-col">
+            <div class="threshold-form">
+              <input type="number" class="threshold-input" min="0" max="100" step="1" placeholder="off"${thresholdValueAttr}>
+              <span class="pct">%</span>
+              <button class="btn small secondary threshold-set-btn" type="button">Set</button>
+            </div>
+            <div class="status-line threshold-status"></div>
+          </td>
           <td class="checked">${item.last_checked ? fmtRelative(item.last_checked) : "—"}</td>
           <td><a class="buy-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">View on Amazon →</a></td>
         </tr>`;
@@ -236,6 +610,7 @@
           <tr>
             <th>Item</th>
             <th>Price</th>
+            <th class="threshold-col">Alert near low</th>
             <th class="checked">Checked</th>
             <th>Link</th>
           </tr>
@@ -244,6 +619,7 @@
       </table>`;
   }
 
+  updateConnectButton();
   load().catch(err => {
     document.getElementById("error-box").innerHTML =
       `<div class="error">Couldn't load tracker data: ${escapeHtml(String(err))}</div>`;
