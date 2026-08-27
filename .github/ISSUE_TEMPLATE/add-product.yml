@@ -1,0 +1,28 @@
+name: Add a product to track
+description: Paste an Amazon product or wishlist link to start tracking its price
+title: "Track: "
+labels: ["add-product"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste a link below and submit. A bot will add it to `products.json`,
+        comment here to confirm, and close this issue automatically.
+  - type: input
+    id: product_link
+    attributes:
+      label: Amazon product link
+      description: >
+        A direct product link (e.g. amazon.com/dp/XXXXXXXXXX) or a public
+        Amazon wishlist link.
+      placeholder: https://www.amazon.com/dp/B0XXXXXXXX
+    validations:
+      required: true
+  - type: input
+    id: nickname
+    attributes:
+      label: Nickname (optional)
+      description: A friendly name to show in alerts and history.
+      placeholder: Noise-cancelling headphones
+    validations:
+      required: false

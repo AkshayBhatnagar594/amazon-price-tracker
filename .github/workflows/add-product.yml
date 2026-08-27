@@ -1,0 +1,50 @@
+name: Add product from issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  add-product:
+    if: contains(github.event.issue.labels.*.name, 'add-product')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Parse issue and update products.json
+        id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/add_product.py
+
+      - name: Commit updated products.json
+        if: steps.add.outputs.status == 'ok'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add products.json
+          git commit -m "Add ${{ steps.add.outputs.name }} via issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment and close on success
+        if: steps.add.outputs.status == 'ok'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "✅ ${{ steps.add.outputs.message }}. It will be checked on the next scheduled run (every 6 hours), or you can trigger the 'Check prices' workflow manually from the Actions tab to check it right away."
+          gh issue close ${{ github.event.issue.number }}
+
+      - name: Comment on failure
+        if: steps.add.outputs.status == 'error'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "❌ ${{ steps.add.outputs.message }}"
