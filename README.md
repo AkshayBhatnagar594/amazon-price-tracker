@@ -57,18 +57,28 @@ ever want to.
 
 ## Setting a price-drop threshold
 
-By default, any tracked item alerts you on **any** price change, up or
-down. If that's too noisy, set a threshold (via the table page, or by
-editing `products.json`'s `thresholds` object directly) — e.g. `10` means
-"only email me when the price is at or within 10% of the lowest price
-ever recorded for this item." A brand new all-time low always alerts
-regardless of the threshold value. Clear the input (or set it via the
-page with a blank value) to go back to alerting on any change.
+By default, every tracked item only alerts when its price is **at or
+within 25% of the lowest price ever recorded for it** — a "this is
+basically the best price ever" deal alert, not noise on every $0.01 move.
+A brand new all-time low always alerts regardless of the percentage.
+
+Two ways to change this:
+
+- **Per item** — set a number (via the table page, or by editing
+  `products.json`'s `thresholds` object directly) to override just that
+  one item, e.g. `5` for a tighter "only really good deals" threshold on
+  something specific. A blank value on the page removes the override and
+  goes back to using the default.
+- **The default itself** — edit `default_alert_threshold_percent` at the
+  top of `products.json` (25 out of the box). Set it to `null` to make
+  the *default* "alert on any change" instead of near-low — items with
+  their own per-item override are unaffected either way.
 
 ```json
 {
+  "default_alert_threshold_percent": 25,
   "thresholds": {
-    "https://www.amazon.com/dp/B0XXXXXXXX/": 10
+    "https://www.amazon.com/dp/B0XXXXXXXX/": 5
   }
 }
 ```

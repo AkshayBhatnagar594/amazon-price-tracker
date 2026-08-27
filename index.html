@@ -102,6 +102,7 @@
   }
   .card-hint { color: var(--muted); font-size: 0.8rem; margin: 0.5rem 0 0; }
   .card-hint a { color: var(--link); }
+  #threshold-hint { margin: 0 0 0.75rem; }
   .status-line { font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.2em; }
   .status-line.err { color: var(--pill-up-fg); }
   .status-line.ok { color: var(--pill-down-fg); }
@@ -215,6 +216,7 @@
   </div>
 
   <div id="error-box"></div>
+  <p class="card-hint" id="threshold-hint"></p>
   <div id="content">Loading…</div>
 </div>
 
@@ -542,6 +544,9 @@
     ]);
 
     const thresholds = products.thresholds || {};
+    const defaultThreshold = products.default_alert_threshold_percent !== undefined
+      ? products.default_alert_threshold_percent
+      : 25;
 
     const rows = new Map();
     for (const p of (products.products || [])) {
@@ -558,10 +563,10 @@
       });
     }
 
-    renderTable(Array.from(rows.values()), thresholds);
+    renderTable(Array.from(rows.values()), thresholds, defaultThreshold);
   }
 
-  function renderTable(items, thresholds) {
+  function renderTable(items, thresholds, defaultThreshold) {
     const content = document.getElementById("content");
     const updated = document.getElementById("updated");
 
@@ -580,6 +585,15 @@
     }
     updated.textContent = mostRecent ? `Last check: ${fmtRelative(mostRecent)}` : "";
 
+    const hasDefault = defaultThreshold !== null && defaultThreshold !== undefined;
+    const placeholderText = hasDefault ? String(defaultThreshold) : "any";
+    const hintEl = document.getElementById("threshold-hint");
+    if (hintEl) {
+      hintEl.textContent = hasDefault
+        ? `Blank = use the default (alert within ${defaultThreshold}% of the all-time low). Set a number to override just that item.`
+        : `Blank = alert on any price change (no default threshold is set). Set a number to override just that item.`;
+    }
+
     const rowsHtml = items.map(item => {
       const priceStr = fmtPrice(item.price);
       const priceCell = priceStr
@@ -593,7 +607,7 @@
           <td>${priceCell}</td>
           <td class="threshold-col">
             <div class="threshold-form">
-              <input type="number" class="threshold-input" min="0" max="100" step="1" placeholder="off"${thresholdValueAttr}>
+              <input type="number" class="threshold-input" min="0" max="100" step="1" placeholder="${escapeHtml(placeholderText)}"${thresholdValueAttr}>
               <span class="pct">%</span>
               <button class="btn small secondary threshold-set-btn" type="button">Set</button>
             </div>

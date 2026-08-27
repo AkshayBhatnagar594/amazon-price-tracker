@@ -41,6 +41,7 @@ HEADERS = {
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 3  # be polite between requests
 DEFAULT_CHECK_INTERVAL_HOURS = 6
+DEFAULT_ALERT_THRESHOLD_PERCENT = 25
 
 PRICE_SELECTORS = [
     "span.a-price span.a-offscreen",
@@ -228,12 +229,16 @@ def should_alert(price, old_price, prior_history, threshold_percent):
 
     - No prior price at all -> never (this is the first successful check
       for this item, there's nothing to compare against yet).
-    - No threshold configured for this URL -> alert on any change from
-      the immediately previous check (the original, simple behavior).
-    - A threshold is configured -> alert only when the new price is at or
-      within threshold_percent of the lowest price ever recorded for this
-      item ("this is basically the best price ever" deal alert), instead
-      of on every small fluctuation.
+    - threshold_percent is None -> alert on any change from the
+      immediately previous check. Callers resolve this from a per-item
+      override in products.json's "thresholds", falling back to
+      "default_alert_threshold_percent" (25 unless set otherwise) - so in
+      practice this None branch only fires if someone explicitly sets a
+      threshold to null for one item to opt it out of the default.
+    - threshold_percent is a number -> alert only when the new price is at
+      or within threshold_percent of the lowest price ever recorded for
+      this item ("this is basically the best price ever" deal alert),
+      instead of on every small fluctuation.
 
     Returns (should_alert, lowest_ever_or_None).
     """
@@ -294,6 +299,11 @@ def main():
     history = load_json(HISTORY_FILE, {})
     latest = load_json(LATEST_FILE, {})
     thresholds = products_config.get("thresholds", {})
+    # Per-item entries in "thresholds" override this; an item with no entry
+    # there falls back to this default (25% unless changed in products.json).
+    # Set "default_alert_threshold_percent": null in products.json to make
+    # the default "alert on any change" instead.
+    default_threshold = products_config.get("default_alert_threshold_percent", DEFAULT_ALERT_THRESHOLD_PERCENT)
 
     now = datetime.now(timezone.utc).isoformat()
     changes = []
@@ -315,7 +325,7 @@ def main():
             continue
 
         old_price = latest.get(norm_url, {}).get("price")
-        alert, lowest_ever = should_alert(price, old_price, history.get(norm_url, []), thresholds.get(norm_url))
+        alert, lowest_ever = should_alert(price, old_price, history.get(norm_url, []), thresholds.get(norm_url, default_threshold))
         if alert:
             changes.append({"name": name, "url": norm_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
@@ -337,7 +347,7 @@ def main():
                 continue
 
             old_price = latest.get(product_url, {}).get("price")
-            alert, lowest_ever = should_alert(price, old_price, history.get(product_url, []), thresholds.get(product_url))
+            alert, lowest_ever = should_alert(price, old_price, history.get(product_url, []), thresholds.get(product_url, default_threshold))
             if alert:
                 changes.append({"name": name, "url": product_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
