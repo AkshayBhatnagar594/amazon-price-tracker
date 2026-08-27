@@ -1,1 +1,14 @@
-{}
+{
+  "https://www.amazon.com/dp/B08QW7K1JJ": [
+    {
+      "date": "2026-08-27T18:02:46.492050+00:00",
+      "price": 16.0
+    }
+  ],
+  "https://www.amazon.com/dp/B0CYZFHWMY/": [
+    {
+      "date": "2026-08-27T18:02:46.492050+00:00",
+      "price": 79.99
+    }
+  ]
+}
