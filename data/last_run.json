@@ -1,1 +1,13 @@
-{}
+{
+  "results": [
+    {
+      "detail": "none of the known price selectors matched (page title: Amazon.com)",
+      "name": "https://www.amazon.com/dp/B0BCR7M9KX/",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B0BCR7M9KX/"
+    }
+  ],
+  "timestamp": "2026-08-27T05:58:35.928334+00:00"
+}
