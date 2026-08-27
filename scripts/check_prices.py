@@ -123,9 +123,11 @@ def check_product(url, fallback_name=None):
                 break
 
     if price is None:
-        detail = f"none of the known price selectors matched (page title: {soup.title.get_text(strip=True) if soup.title else 'n/a'})"
+        snippet = soup.get_text(" ", strip=True)[:300]
+        title = soup.title.get_text(strip=True) if soup.title else "n/a"
+        detail = f"page title: {title} | body snippet: {snippet}"
         print(f"  [warn] could not find a price for {url} (Amazon may have changed their page layout)")
-        return name, None, "no_price_found", detail[:300]
+        return name, None, "no_price_found", detail[:500]
 
     return name, price, "ok", ""
 
