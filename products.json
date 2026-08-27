@@ -1,14 +1,7 @@
 {
   "products": [
     {
-      "url": "https://www.amazon.com/dp/B0BCR7M9KX/"
-    },
-    {
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
-    },
-    {
-      "name": "Amazon item B0CHX3QBQK",
-      "url": "https://www.amazon.com/dp/B0CHX3QBQK/"
     }
   ],
   "wishlists": []
