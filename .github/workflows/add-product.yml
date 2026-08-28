@@ -44,8 +44,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add products.json
-          git commit -m "Add ${{ steps.add.outputs.name }}"
+          git add products.json data/history.json data/latest.json
+          git diff --cached --quiet || git commit -m "Add ${{ steps.add.outputs.name }}"
           git push
 
       - name: Rename issue to match the product
@@ -60,7 +60,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh issue comment ${{ github.event.issue.number }} --body "✅ ${{ steps.add.outputs.message }}. It will be checked on the next scheduled run, or you can trigger the 'Check prices' workflow manually from the Actions tab to check it right away."
+          gh issue comment ${{ github.event.issue.number }} --body "✅ ${{ steps.add.outputs.message }}."
           gh issue close ${{ github.event.issue.number }}
 
       - name: Comment on failure (issue)
