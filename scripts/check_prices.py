@@ -2,7 +2,22 @@
 """
 Checks the current Amazon price for every product/wishlist configured in
 products.json, records it in data/history.json + data/latest.json, and
-emails a summary when any price has changed since the last check.
+sends a push notification (via ntfy.sh) when a price is worth knowing
+about.
+
+"Worth knowing about" - see should_alert() - is judged against the lowest
+price *we've* recorded for that item, in data/history.json. There's no
+free, reliable way to get Amazon's own official price history (Amazon
+doesn't publish one, and third-party sites that track it, like
+camelcamelcamel, block scraping from cloud IPs same as Amazon does) - so
+this baseline starts at "lowest since you added it" and becomes more
+meaningful the longer an item's been tracked, rather than a true 365-day
+low from day one.
+
+Notifications are de-duped using data/alert_state.json: once an item
+enters its "near the low" band, you're notified once, not again on every
+run while it stays there - only if it drops even lower, or leaves the
+band and dips back into it later.
 
 Run manually with:  python scripts/check_prices.py
 Run automatically by .github/workflows/check-prices.yml on a schedule.
@@ -11,12 +26,9 @@ Run automatically by .github/workflows/check-prices.yml on a schedule.
 import json
 import os
 import re
-import smtplib
 import sys
 import time
 from datetime import datetime, timezone
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -28,6 +40,7 @@ PRODUCTS_FILE = ROOT / "products.json"
 HISTORY_FILE = ROOT / "data" / "history.json"
 LATEST_FILE = ROOT / "data" / "latest.json"
 LAST_RUN_FILE = ROOT / "data" / "last_run.json"
+ALERT_STATE_FILE = ROOT / "data" / "alert_state.json"
 
 HEADERS = {
     "User-Agent": (
@@ -181,51 +194,56 @@ def check_wishlist(url):
     return results, "ok", ""
 
 
-def send_email(changes):
-    smtp_server = os.environ.get("SMTP_SERVER", "smtp.gmail.com")
-    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
-    smtp_username = os.environ.get("SMTP_USERNAME")
-    smtp_password = os.environ.get("SMTP_PASSWORD")
-    email_to = os.environ.get("EMAIL_TO")
-
-    if not all([smtp_username, smtp_password, email_to]):
-        print("  [warn] SMTP_USERNAME, SMTP_PASSWORD, or EMAIL_TO not set - skipping email, see README for setup")
+def send_ntfy(changes):
+    """
+    Posts a single push notification (via ntfy.sh, or a self-hosted ntfy
+    server if NTFY_SERVER is set) summarizing every price worth knowing
+    about from this run. Requires NTFY_TOPIC - see README for setup.
+    """
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic:
+        print("  [warn] NTFY_TOPIC not set - skipping notification, see README for setup")
         return
+
+    server = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
 
     lines = []
     for c in changes:
-        direction = "UP" if c["new_price"] > (c["old_price"] or 0) else "DOWN"
-        old = f"${c['old_price']:.2f}" if c["old_price"] is not None else "unknown"
         new = f"${c['new_price']:.2f}"
-        tag = ""
-        if c.get("lowest_ever") is not None:
-            if c["new_price"] <= c["lowest_ever"]:
-                tag = " (new all-time low!)"
-            else:
-                tag = f" (within threshold of the all-time low of ${c['lowest_ever']:.2f})"
-        lines.append(f"[{direction}] {c['name']}{tag}\n  {old} -> {new}\n  {c['url']}\n")
+        if c.get("lowest_ever") is not None and c["new_price"] <= c["lowest_ever"]:
+            note = "new low!"
+        elif c.get("lowest_ever") is not None:
+            note = f"near the low of ${c['lowest_ever']:.2f}"
+        else:
+            old = f"${c['old_price']:.2f}" if c["old_price"] is not None else "unknown"
+            note = f"was {old}"
+        lines.append(f"{c['name']} - {new} ({note})\n{c['url']}")
 
-    body = "Price changes detected:\n\n" + "\n".join(lines)
-
-    msg = MIMEMultipart()
-    msg["From"] = smtp_username
-    msg["To"] = email_to
-    msg["Subject"] = f"Amazon price change alert ({len(changes)} item{'s' if len(changes) != 1 else ''})"
-    msg.attach(MIMEText(body, "plain"))
+    body = "\n\n".join(lines)
+    title = f"Amazon price alert ({len(changes)} item{'s' if len(changes) != 1 else ''})"
 
     try:
-        with smtplib.SMTP(smtp_server, smtp_port) as server:
-            server.starttls()
-            server.login(smtp_username, smtp_password)
-            server.sendmail(smtp_username, email_to, msg.as_string())
-        print(f"  [ok] email sent to {email_to}")
-    except smtplib.SMTPException as e:
-        print(f"  [error] failed to send email: {e}")
+        resp = requests.post(
+            f"{server}/{topic}",
+            data=body.encode("utf-8"),
+            headers={
+                "Title": title,
+                "Priority": "default",
+                "Tags": "moneybag",
+            },
+            timeout=15,
+        )
+        if resp.status_code >= 300:
+            print(f"  [error] ntfy responded with {resp.status_code}: {resp.text[:200]}")
+        else:
+            print(f"  [ok] notification sent to ntfy topic '{topic}'")
+    except requests.RequestException as e:
+        print(f"  [error] failed to send ntfy notification: {e}")
 
 
 def should_alert(price, old_price, prior_history, threshold_percent):
     """
-    Decides whether a price is worth emailing about.
+    Decides whether a price is worth notifying about.
 
     - No prior price at all -> never (this is the first successful check
       for this item, there's nothing to compare against yet).
@@ -254,6 +272,29 @@ def should_alert(price, old_price, prior_history, threshold_percent):
 
     lowest_ever = min(prior_prices)
     return price <= lowest_ever * (1 + threshold_percent / 100), lowest_ever
+
+
+def evaluate_alert(url, price, old_price, prior_history, threshold_percent, alert_state):
+    """
+    Wraps should_alert() with de-dup state so a price that's still near
+    the low doesn't notify again on every run. alert_state is mutated in
+    place: url -> {"price": ..., "date": ...} while it's in the "near the
+    low" band, removed once it leaves the band (so a later dip back in
+    notifies again fresh).
+
+    Returns (should_notify, lowest_ever_or_None).
+    """
+    eligible, lowest_ever = should_alert(price, old_price, prior_history, threshold_percent)
+    if not eligible:
+        alert_state.pop(url, None)
+        return False, lowest_ever
+
+    prev = alert_state.get(url)
+    if prev is None or price < prev.get("price", float("inf")):
+        alert_state[url] = {"price": price, "date": datetime.now(timezone.utc).isoformat()}
+        return True, lowest_ever
+
+    return False, lowest_ever
 
 
 def should_run_now(products_config):
@@ -298,6 +339,7 @@ def main():
 
     history = load_json(HISTORY_FILE, {})
     latest = load_json(LATEST_FILE, {})
+    alert_state = load_json(ALERT_STATE_FILE, {})
     thresholds = products_config.get("thresholds", {})
     # Per-item entries in "thresholds" override this; an item with no entry
     # there falls back to this default (25% unless changed in products.json).
@@ -325,8 +367,8 @@ def main():
             continue
 
         old_price = latest.get(norm_url, {}).get("price")
-        alert, lowest_ever = should_alert(price, old_price, history.get(norm_url, []), thresholds.get(norm_url, default_threshold))
-        if alert:
+        notify, lowest_ever = evaluate_alert(norm_url, price, old_price, history.get(norm_url, []), thresholds.get(norm_url, default_threshold), alert_state)
+        if notify:
             changes.append({"name": name, "url": norm_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
         history.setdefault(norm_url, []).append({"date": now, "price": price})
@@ -347,8 +389,8 @@ def main():
                 continue
 
             old_price = latest.get(product_url, {}).get("price")
-            alert, lowest_ever = should_alert(price, old_price, history.get(product_url, []), thresholds.get(product_url, default_threshold))
-            if alert:
+            notify, lowest_ever = evaluate_alert(product_url, price, old_price, history.get(product_url, []), thresholds.get(product_url, default_threshold), alert_state)
+            if notify:
                 changes.append({"name": name, "url": product_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
 
             history.setdefault(product_url, []).append({"date": now, "price": price})
@@ -357,14 +399,15 @@ def main():
     save_json(HISTORY_FILE, history)
     save_json(LATEST_FILE, latest)
     save_json(LAST_RUN_FILE, {"timestamp": now, "results": run_log})
+    save_json(ALERT_STATE_FILE, alert_state)
 
     if changes:
-        print(f"\n{len(changes)} price change(s) detected:")
+        print(f"\n{len(changes)} price change(s) worth notifying about:")
         for c in changes:
             print(f"  {c['name']}: {c['old_price']} -> {c['new_price']}")
-        send_email(changes)
+        send_ntfy(changes)
     else:
-        print("\nNo price changes detected.")
+        print("\nNo price changes worth notifying about.")
 
 
 if __name__ == "__main__":

@@ -163,6 +163,13 @@
   .pill.low { background: var(--pill-down-bg); color: var(--pill-down-fg); }
   .pill.high { background: var(--pill-up-bg); color: var(--pill-up-fg); }
 
+  .row-actions { margin-top: 0.5rem; }
+  .btn.small.secondary.armed {
+    background: var(--pill-up-bg);
+    color: var(--pill-up-fg);
+    border-color: transparent;
+  }
+
   @media (max-width: 700px) {
     .checked { display: none; }
   }
@@ -233,6 +240,9 @@
 
   <div id="error-box"></div>
   <p class="card-hint" id="threshold-hint"></p>
+  <p class="card-hint">
+    "Lowest" is the lowest price <em>we've</em> recorded since each item was added - Amazon doesn't publish its own price history, so this gets more meaningful the longer an item's been tracked.
+  </p>
   <div id="content">Loading…</div>
 </div>
 
@@ -515,30 +525,69 @@
     if (e.key === "Enter") document.getElementById("add-link-btn").click();
   });
 
-  // ---------- set threshold (delegated - rows are re-rendered) ----------
+  // ---------- set threshold / mark purchased (delegated - rows are re-rendered) ----------
   document.getElementById("content").addEventListener("click", async (e) => {
-    const btn = e.target.closest(".threshold-set-btn");
-    if (!btn) return;
+    const thresholdBtn = e.target.closest(".threshold-set-btn");
+    if (thresholdBtn) {
+      const row = thresholdBtn.closest("tr");
+      const url = row.dataset.url;
+      const input = row.querySelector(".threshold-input");
+      const statusEl = row.querySelector(".threshold-status");
+      const value = input.value.trim();
 
-    const row = btn.closest("tr");
-    const url = row.dataset.url;
-    const input = row.querySelector(".threshold-input");
-    const statusEl = row.querySelector(".threshold-status");
-    const value = input.value.trim();
-
-    btn.disabled = true;
-    if (statusEl) statusEl.textContent = "…";
-    try {
-      const result = await runWorkflowAndWait("set-threshold.yml", { product_link: url, threshold_percent: value }, (t) => { if (statusEl) statusEl.textContent = t; });
-      if (result.ok) {
-        await load();
-      } else if (statusEl) {
-        statusEl.textContent = result.error;
+      thresholdBtn.disabled = true;
+      if (statusEl) statusEl.textContent = "…";
+      try {
+        const result = await runWorkflowAndWait("set-threshold.yml", { product_link: url, threshold_percent: value }, (t) => { if (statusEl) statusEl.textContent = t; });
+        if (result.ok) {
+          await load();
+        } else if (statusEl) {
+          statusEl.textContent = result.error;
+        }
+      } catch (err) {
+        if (statusEl) statusEl.textContent = String(err.message || err);
+      } finally {
+        thresholdBtn.disabled = false;
       }
-    } catch (err) {
-      if (statusEl) statusEl.textContent = String(err.message || err);
-    } finally {
-      btn.disabled = false;
+      return;
+    }
+
+    const purchasedBtn = e.target.closest(".mark-purchased-btn");
+    if (purchasedBtn) {
+      const armed = purchasedBtn.dataset.armed === "true";
+
+      if (!armed) {
+        purchasedBtn.dataset.armed = "true";
+        purchasedBtn.textContent = "Confirm remove?";
+        purchasedBtn.classList.add("armed");
+        clearTimeout(purchasedBtn._armTimer);
+        purchasedBtn._armTimer = setTimeout(() => {
+          purchasedBtn.dataset.armed = "false";
+          purchasedBtn.textContent = "Mark purchased";
+          purchasedBtn.classList.remove("armed");
+        }, 4000);
+        return;
+      }
+
+      clearTimeout(purchasedBtn._armTimer);
+      const row = purchasedBtn.closest("tr");
+      const url = row.dataset.url;
+      const statusEl = row.querySelector(".purchased-status");
+
+      purchasedBtn.disabled = true;
+      if (statusEl) statusEl.textContent = "Removing…";
+      try {
+        const result = await runWorkflowAndWait("remove-product.yml", { product_link: url }, (t) => { if (statusEl) statusEl.textContent = t; });
+        if (result.ok) {
+          await load();
+        } else {
+          if (statusEl) statusEl.textContent = result.error;
+          purchasedBtn.disabled = false;
+        }
+      } catch (err) {
+        if (statusEl) statusEl.textContent = String(err.message || err);
+        purchasedBtn.disabled = false;
+      }
     }
   });
 
@@ -661,7 +710,13 @@
             <div class="status-line threshold-status"></div>
           </td>
           <td class="checked">${item.last_checked ? fmtRelative(item.last_checked) : "—"}</td>
-          <td><a class="buy-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">View on Amazon →</a></td>
+          <td>
+            <a class="buy-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">View on Amazon →</a>
+            <div class="row-actions">
+              <button class="btn small secondary mark-purchased-btn" type="button" data-armed="false">Mark purchased</button>
+              <div class="status-line purchased-status"></div>
+            </div>
+          </td>
         </tr>`;
     }).join("");
 
@@ -672,7 +727,7 @@
             <tr>
               <th>Item</th>
               <th>Price</th>
-              <th>Lowest (1yr)</th>
+              <th>Lowest (tracked)</th>
               <th class="threshold-col">Alert near low</th>
               <th class="checked">Checked</th>
               <th>Link</th>
