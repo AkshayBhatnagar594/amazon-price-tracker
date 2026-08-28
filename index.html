@@ -151,6 +151,18 @@
   }
   .threshold-form .pct { color: var(--muted); font-size: 0.85rem; }
 
+  .lowest-cell { display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  .pill {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill.low { background: var(--pill-down-bg); color: var(--pill-down-fg); }
+  .pill.high { background: var(--pill-up-bg); color: var(--pill-up-fg); }
+
   @media (max-width: 700px) {
     .checked { display: none; }
   }
@@ -159,7 +171,7 @@
     -webkit-overflow-scrolling: touch;
   }
   @media (max-width: 560px) {
-    table { min-width: 480px; }
+    table { min-width: 620px; }
   }
 
   /* Connect-token modal */
@@ -542,9 +554,10 @@
   }
 
   async function load() {
-    const [products, latest] = await Promise.all([
+    const [products, latest, history] = await Promise.all([
       fetchJson("./products.json", { products: [], wishlists: [], thresholds: {} }),
       fetchJson("./data/latest.json", {}),
+      fetchJson("./data/history.json", {}),
     ]);
 
     const thresholds = products.thresholds || {};
@@ -565,6 +578,17 @@
         price: info.price,
         last_checked: info.last_checked,
       });
+    }
+
+    // Lowest price recorded in the last 365 days (falls back to all
+    // history if the item hasn't been tracked that long yet).
+    const ONE_YEAR_MS = 365 * 24 * 60 * 60 * 1000;
+    const cutoffMs = Date.now() - ONE_YEAR_MS;
+    for (const row of rows.values()) {
+      const points = (history[row.url] || []).filter(h => h.price !== null && h.price !== undefined);
+      const recentPoints = points.filter(h => new Date(h.date).getTime() >= cutoffMs);
+      const usable = recentPoints.length > 0 ? recentPoints : points;
+      row.lowest1y = usable.length > 0 ? Math.min(...usable.map(h => h.price)) : null;
     }
 
     renderTable(Array.from(rows.values()), thresholds, defaultThreshold);
@@ -603,12 +627,31 @@
       const priceCell = priceStr
         ? `<span class="price">${priceStr}</span>`
         : `<span class="price pending">not checked yet</span>`;
+
+      let lowestCell = `<span class="price pending">—</span>`;
+      if (item.lowest1y !== null && item.lowest1y !== undefined) {
+        const lowestStr = fmtPrice(item.lowest1y);
+        let pillHtml = "";
+        if (item.price !== null && item.price !== undefined) {
+          const pct = Math.round(((item.price / item.lowest1y) - 1) * 100);
+          if (pct <= 0) {
+            pillHtml = `<span class="pill low">at 1-yr low</span>`;
+          } else {
+            const itemThreshold = thresholds[item.url] !== undefined ? thresholds[item.url] : defaultThreshold;
+            const nearLow = itemThreshold !== null && itemThreshold !== undefined && pct <= itemThreshold;
+            pillHtml = `<span class="pill ${nearLow ? "low" : "high"}">+${pct}% vs low</span>`;
+          }
+        }
+        lowestCell = `<div class="lowest-cell"><span class="price">${lowestStr}</span>${pillHtml}</div>`;
+      }
+
       const currentThreshold = thresholds[item.url];
       const thresholdValueAttr = currentThreshold !== undefined ? ` value="${escapeHtml(String(currentThreshold))}"` : "";
       return `
         <tr data-url="${escapeHtml(item.url)}">
           <td class="name">${escapeHtml(item.name)}</td>
           <td>${priceCell}</td>
+          <td>${lowestCell}</td>
           <td class="threshold-col">
             <div class="threshold-form">
               <input type="number" class="threshold-input" min="0" max="100" step="1" placeholder="${escapeHtml(placeholderText)}"${thresholdValueAttr}>
@@ -629,6 +672,7 @@
             <tr>
               <th>Item</th>
               <th>Price</th>
+              <th>Lowest (1yr)</th>
               <th class="threshold-col">Alert near low</th>
               <th class="checked">Checked</th>
               <th>Link</th>
