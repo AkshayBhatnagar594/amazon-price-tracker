@@ -9,6 +9,9 @@ knowing about. Runs entirely on GitHub Actions — no server to host.
   to check prices right now, add a new link, and set a per-item price-drop
   alert threshold — all without leaving the page. See "The price table
   page" below.
+- **Shows Amazon's own list price alongside the current one** — the
+  "Original (when added)" column — so you can tell at a glance whether an
+  item was already discounted the day you started tracking it.
 - **Add new items** through that page, a title-free GitHub Actions form, or
   a GitHub Issue form — whichever's convenient.
 - **Pushes a notification to your phone** (via [ntfy.sh](https://ntfy.sh),
@@ -63,6 +66,32 @@ your browser's `localStorage`, never sent anywhere but GitHub's API
 directly from your browser. Revoke it anytime at
 [github.com/settings/tokens](https://github.com/settings/tokens) if you
 ever want to.
+
+## The "Original (when added)" column
+
+This shows Amazon's own crossed-out list/"was" price — not something this
+tool calculates, but whatever Amazon itself displayed as the pre-discount
+price the first time it was successfully captured for that item. It's
+captured once and then never changes, so a month from now you can look at
+an item and tell whether it was already marked down when you added it, or
+whether the current price is a genuinely new discount.
+
+A few things worth knowing:
+
+- **Not every product has one.** Plenty of Amazon listings don't show a
+  list price at all — the column just shows "—" for those.
+- **It's captured opportunistically, not guaranteed at add time.** Adding
+  a product tries to fetch it immediately, but if that attempt gets
+  blocked by Amazon's bot-check (common on GitHub-hosted runners), it's
+  automatically backfilled the first time a later scheduled check gets
+  through cleanly — you don't need to do anything.
+- **It's a snapshot, not "the lowest we've seen."** If Amazon's list price
+  itself changes later, this column won't update — that's intentional, so
+  the "was this already a deal when I added it" comparison stays fixed to
+  add time. Use the "Lowest (tracked)" column for the ongoing lowest price.
+- The percentage badge next to it (e.g. "-36% off list") compares
+  **today's price** to this original price, so it moves as the current
+  price changes even though the original price itself doesn't.
 
 ## Setting a price-drop threshold
 
