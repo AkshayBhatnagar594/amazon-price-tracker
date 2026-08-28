@@ -64,6 +64,14 @@ PRICE_SELECTORS = [
     "#corePriceDisplay_desktop_feature_div span.a-offscreen",
 ]
 
+# Amazon's crossed-out "list price" / "was" price, when it shows one -
+# distinct from the current offer price above. Not every product has one.
+ORIGINAL_PRICE_SELECTORS = [
+    "span.a-price.a-text-price span.a-offscreen",
+    "span[data-a-strike='true'] span.a-offscreen",
+    ".basisPrice .a-offscreen",
+]
+
 
 def load_json(path, default):
     if not path.exists():
@@ -111,20 +119,32 @@ def fetch(url):
     return BeautifulSoup(resp.text, "lxml")
 
 
+def extract_original_price(soup):
+    for selector in ORIGINAL_PRICE_SELECTORS:
+        tag = soup.select_one(selector)
+        if tag:
+            price = parse_price(tag.get_text(strip=True))
+            if price is not None:
+                return price
+    return None
+
+
 def check_product(url, fallback_name=None):
-    """Returns (name, price, status, detail). status is one of:
-    ok | request_error | captcha | no_price_found
+    """Returns (name, price, original_price, status, detail). status is
+    one of: ok | request_error | captcha | no_price_found. original_price
+    is Amazon's own crossed-out "list price" if the page shows one, else
+    None - it's None whenever price is also None.
     """
     url = normalize_url(url)
     try:
         soup = fetch(url)
     except requests.RequestException as e:
         print(f"  [warn] request failed for {url}: {e}")
-        return fallback_name or url, None, "request_error", str(e)[:300]
+        return fallback_name or url, None, None, "request_error", str(e)[:300]
 
     if looks_like_captcha(soup):
         print(f"  [warn] Amazon returned a CAPTCHA/robot check for {url} - skipping this run")
-        return fallback_name or url, None, "captcha", "Amazon served a robot-check page instead of the product page"
+        return fallback_name or url, None, None, "captcha", "Amazon served a robot-check page instead of the product page"
 
     title_tag = soup.select_one("#productTitle")
     name = title_tag.get_text(strip=True) if title_tag else (fallback_name or url)
@@ -142,9 +162,10 @@ def check_product(url, fallback_name=None):
         title = soup.title.get_text(strip=True) if soup.title else "n/a"
         detail = f"page title: {title} | body snippet: {snippet}"
         print(f"  [warn] could not find a price for {url} (Amazon may have changed their page layout)")
-        return name, None, "no_price_found", detail[:500]
+        return name, None, None, "no_price_found", detail[:500]
 
-    return name, price, "ok", ""
+    original_price = extract_original_price(soup)
+    return name, price, original_price, "ok", ""
 
 
 def check_wishlist(url):
@@ -350,21 +371,36 @@ def main():
     now = datetime.now(timezone.utc).isoformat()
     changes = []
     run_log = []
+    products_changed = False
 
     # Direct product links
-    for entry in products_config.get("products", []):
+    products_list = products_config.get("products", [])
+    for i, entry in enumerate(products_list):
         url = entry["url"] if isinstance(entry, dict) else entry
         fallback_name = entry.get("name") if isinstance(entry, dict) else None
         norm_url = normalize_url(url)
 
         print(f"Checking product: {fallback_name or norm_url}")
-        name, price, status, detail = check_product(url, fallback_name)
+        name, price, original_price, status, detail = check_product(url, fallback_name)
         time.sleep(REQUEST_DELAY_SECONDS)
 
         run_log.append({"type": "product", "url": norm_url, "name": name, "status": status, "detail": detail, "price": price})
 
         if price is None:
             continue
+
+        # Backfill "price when added" the first time we successfully see
+        # Amazon's own list/"was" price for this item - add_product.py
+        # tries this at add time, but if that attempt got blocked (common),
+        # this picks it up later instead of leaving it permanently unset.
+        if original_price is not None:
+            if isinstance(entry, dict):
+                if entry.get("original_price") is None:
+                    entry["original_price"] = original_price
+                    products_changed = True
+            else:
+                products_list[i] = {"url": url, "name": fallback_name or name, "original_price": original_price}
+                products_changed = True
 
         old_price = latest.get(norm_url, {}).get("price")
         notify, lowest_ever = evaluate_alert(norm_url, price, old_price, history.get(norm_url, []), thresholds.get(norm_url, default_threshold), alert_state)
@@ -400,6 +436,8 @@ def main():
     save_json(LATEST_FILE, latest)
     save_json(LAST_RUN_FILE, {"timestamp": now, "results": run_log})
     save_json(ALERT_STATE_FILE, alert_state)
+    if products_changed:
+        save_json(PRODUCTS_FILE, products_config)
 
     if changes:
         print(f"\n{len(changes)} price change(s) worth notifying about:")

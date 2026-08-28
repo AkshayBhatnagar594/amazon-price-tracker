@@ -68,6 +68,14 @@ PRICE_SELECTORS = [
     "#corePrice_feature_div span.a-offscreen",
     "#corePriceDisplay_desktop_feature_div span.a-offscreen",
 ]
+# Amazon's crossed-out "list price" / "was" price, when it shows one -
+# captured once at add time so you can see later whether it was already
+# marked down when you added it. Not every product has one.
+ORIGINAL_PRICE_SELECTORS = [
+    "span.a-price.a-text-price span.a-offscreen",
+    "span[data-a-strike='true'] span.a-offscreen",
+    ".basisPrice .a-offscreen",
+]
 FETCH_ATTEMPTS = 3
 FETCH_RETRY_DELAY_SECONDS = 5
 
@@ -142,13 +150,15 @@ def looks_like_captcha(soup):
 
 def fetch_product_details(url):
     """
-    Best-effort live fetch of both the product title and its current price
-    in one request. Amazon's bot-check is inconsistent run to run, so this
+    Best-effort live fetch of the product title, its current price, and
+    Amazon's own crossed-out "list price" (if it shows one), in one
+    request. Amazon's bot-check is inconsistent run to run, so this
     retries a few times with a short delay before giving up. Never raises -
-    returns (name, price) with either/both as None on failure, since a
-    fetch problem should never block adding the product itself (the name
-    falls back to guess_name_from_url, and the price just stays unset until
-    a later check_prices.py run gets through).
+    returns (name, price, original_price) with any/all as None on failure,
+    since a fetch problem should never block adding the product itself
+    (the name falls back to guess_name_from_url, and the price/original
+    price just stay unset until a later check_prices.py run gets through
+    - which also backfills original_price if this attempt missed it).
     """
     for attempt in range(1, FETCH_ATTEMPTS + 1):
         soup = None
@@ -172,13 +182,21 @@ def fetch_product_details(url):
                     if price is not None:
                         break
 
+            original_price = None
+            for selector in ORIGINAL_PRICE_SELECTORS:
+                tag = soup.select_one(selector)
+                if tag:
+                    original_price = parse_price(tag.get_text(strip=True))
+                    if original_price is not None:
+                        break
+
             if name or price is not None:
-                return name, price
+                return name, price, original_price
 
         if attempt < FETCH_ATTEMPTS:
             time.sleep(FETCH_RETRY_DELAY_SECONDS)
 
-    return None, None
+    return None, None, None
 
 
 def parse_issue_form(body):
@@ -283,9 +301,11 @@ def main():
             write_output("error", f"That product is already being tracked: {norm_url}")
             return 0
 
-        fetched_name, price = fetch_product_details(norm_url)
+        fetched_name, price, original_price = fetch_product_details(norm_url)
         name = nickname or fetched_name or guess_name_from_url(norm_url)
         entry = {"url": norm_url, "name": name}
+        if original_price is not None:
+            entry["original_price"] = original_price
         config["products"].append(entry)
 
         price_note = ""

@@ -162,6 +162,7 @@
   }
   .pill.low { background: var(--pill-down-bg); color: var(--pill-down-fg); }
   .pill.high { background: var(--pill-up-bg); color: var(--pill-up-fg); }
+  .muted-price { color: var(--muted); font-weight: 400; }
 
   .row-actions { margin-top: 0.5rem; }
   .btn.small.secondary.armed {
@@ -178,7 +179,7 @@
     -webkit-overflow-scrolling: touch;
   }
   @media (max-width: 560px) {
-    table { min-width: 620px; }
+    table { min-width: 760px; }
   }
 
   /* Connect-token modal */
@@ -241,7 +242,7 @@
   <div id="error-box"></div>
   <p class="card-hint" id="threshold-hint"></p>
   <p class="card-hint">
-    "Lowest" is the lowest price <em>we've</em> recorded since each item was added - Amazon doesn't publish its own price history, so this gets more meaningful the longer an item's been tracked.
+    "Original" is Amazon's own crossed-out list price the first time we successfully saw one for that item (not every product has one). "Lowest" is the lowest price <em>we've</em> recorded since each item was added - Amazon doesn't publish its own price history, so this gets more meaningful the longer an item's been tracked.
   </p>
   <div id="content">Loading…</div>
 </div>
@@ -618,10 +619,15 @@
     for (const p of (products.products || [])) {
       const url = typeof p === "string" ? p : p.url;
       const name = typeof p === "string" ? url : (p.name || url);
-      rows.set(url, { url, name, price: null, last_checked: null });
+      const originalPrice = typeof p === "string" ? null : (p.original_price ?? null);
+      rows.set(url, { url, name, price: null, last_checked: null, originalPrice });
     }
     for (const [url, info] of Object.entries(latest || {})) {
+      // Merge rather than replace - originalPrice only lives in
+      // products.json, not data/latest.json.
+      const existing = rows.get(url) || { url, originalPrice: null };
       rows.set(url, {
+        ...existing,
         url,
         name: info.name || url,
         price: info.price,
@@ -677,6 +683,21 @@
         ? `<span class="price">${priceStr}</span>`
         : `<span class="price pending">not checked yet</span>`;
 
+      let originalCell = `<span class="price pending">—</span>`;
+      if (item.originalPrice !== null && item.originalPrice !== undefined) {
+        const originalStr = fmtPrice(item.originalPrice);
+        let badge = "";
+        if (item.price !== null && item.price !== undefined && item.originalPrice > 0) {
+          const pct = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100);
+          if (pct > 0) {
+            badge = `<span class="pill low">-${pct}% off list</span>`;
+          } else if (pct < 0) {
+            badge = `<span class="pill high">+${Math.abs(pct)}% vs list</span>`;
+          }
+        }
+        originalCell = `<div class="lowest-cell"><s class="price muted-price">${originalStr}</s>${badge}</div>`;
+      }
+
       let lowestCell = `<span class="price pending">—</span>`;
       if (item.lowest1y !== null && item.lowest1y !== undefined) {
         const lowestStr = fmtPrice(item.lowest1y);
@@ -700,6 +721,7 @@
         <tr data-url="${escapeHtml(item.url)}">
           <td class="name">${escapeHtml(item.name)}</td>
           <td>${priceCell}</td>
+          <td>${originalCell}</td>
           <td>${lowestCell}</td>
           <td class="threshold-col">
             <div class="threshold-form">
@@ -727,6 +749,7 @@
             <tr>
               <th>Item</th>
               <th>Price</th>
+              <th>Original (when added)</th>
               <th>Lowest (tracked)</th>
               <th class="threshold-col">Alert near low</th>
               <th class="checked">Checked</th>
