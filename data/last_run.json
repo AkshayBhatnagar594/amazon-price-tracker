@@ -15,7 +15,15 @@
       "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B08QW7K1JJ"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BHSZN2JV",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     }
   ],
-  "timestamp": "2026-08-27T21:55:59.219772+00:00"
+  "timestamp": "2026-08-28T03:36:43.622206+00:00"
 }
