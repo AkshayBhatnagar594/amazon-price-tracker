@@ -4,6 +4,7 @@
   "products": [
     {
       "name": "Modern Pendant Light",
+      "original_price": 79.99,
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
@@ -13,6 +14,7 @@
     },
     {
       "name": "Amazon item B0BHSZN2JV",
+      "original_price": 152.99,
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     }
   ],
