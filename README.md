@@ -1,8 +1,8 @@
 # Amazon Price Tracker
 
 Tracks the price of Amazon products (or everything on a public Amazon
-wishlist) and emails you when a price changes. Runs entirely on GitHub
-Actions — no server to host.
+wishlist) and pushes a notification to your phone when a price is worth
+knowing about. Runs entirely on GitHub Actions — no server to host.
 
 - **Checks prices every 6 hours** via a scheduled GitHub Actions workflow.
 - **A live web page** (GitHub Pages) lists everything tracked, with buttons
@@ -11,8 +11,9 @@ Actions — no server to host.
   page" below.
 - **Add new items** through that page, a title-free GitHub Actions form, or
   a GitHub Issue form — whichever's convenient.
-- **Emails you** when a tracked item's price changes (or, if you've set a
-  threshold for it, only when it's near its all-time low).
+- **Pushes a notification to your phone** (via [ntfy.sh](https://ntfy.sh),
+  free, no account needed) when a tracked item's price is near its
+  all-time low - once per "deal," not again every day it stays there.
 - **Keeps full price history** in `data/history.json`, committed back to
   the repo on every run.
 
@@ -22,15 +23,18 @@ Actions — no server to host.
 .github/workflows/check-prices.yml     -> runs scripts/check_prices.py hourly (see check_interval_hours)
 .github/workflows/add-product.yml      -> runs scripts/add_product.py from an issue OR a manual "Run workflow"
 .github/workflows/set-threshold.yml    -> runs scripts/set_threshold.py to set/clear a price-alert threshold
+.github/workflows/remove-product.yml   -> runs scripts/remove_product.py to stop tracking something
 .github/ISSUE_TEMPLATE/add-product.yml -> the issue form you can use to add links
 index.html                             -> the live price table page (GitHub Pages)
 products.json                          -> the list of things being tracked + settings
 data/history.json                      -> every price ever recorded, per item
 data/latest.json                       -> the most recent known price per item
 data/last_run.json                     -> per-item diagnostics from the last check
-scripts/check_prices.py                -> scraper + email sender
-scripts/add_product.py                 -> parses a new product/wishlist link into products.json
+data/alert_state.json                  -> tracks which items you've already been notified about
+scripts/check_prices.py                -> scraper + ntfy notifier
+scripts/add_product.py                 -> parses a new product/wishlist link into products.json, fetches its name+price
 scripts/set_threshold.py               -> sets/clears a per-item alert threshold
+scripts/remove_product.py              -> drops an item from products.json (e.g. once you've bought it)
 ```
 
 ## The price table page
@@ -42,9 +46,14 @@ default; connecting a token unlocks three things right from the page:
 - **"Check prices now"** — triggers a real check immediately (bypasses
   `check_interval_hours`), waits for it to finish, and refreshes the table.
 - **The add-link box** — paste an Amazon link, click Add. Same auto-naming
-  as the other add methods, no issue or title involved.
+  as the other add methods, and it fetches the current price right away
+  too (with a couple of retries), rather than waiting for the next
+  scheduled check.
 - **Per-item "Alert near low"** — type a percentage and click Set. See
   "Setting a price-drop threshold" below for what it means.
+- **"Mark purchased"** — click once to arm it, click again to confirm,
+  and it's dropped from the tracked list (no more checks, no more
+  notifications for it). See "Marking something as purchased" below.
 
 These need a GitHub token because the page is static (no backend) — click
 **Connect** and follow the in-page instructions to create a
@@ -62,7 +71,23 @@ within 25% of the lowest price ever recorded for it** — a "this is
 basically the best price ever" deal alert, not noise on every $0.01 move.
 A brand new all-time low always alerts regardless of the percentage.
 
-Two ways to change this:
+**"Lowest price ever recorded" means recorded by this tool, not by
+Amazon.** Amazon doesn't publish its own price-history feed, and the
+free third-party sites that track it (e.g. camelcamelcamel) block
+scraping from cloud IPs the same way Amazon does - so there's no free
+way to seed this with Amazon's true 365-day low from day one. It starts
+as "lowest since you added it" and becomes a more meaningful "lowest in
+X months" the longer an item's been tracked. (A paid API like
+[Keepa](https://keepa.com/#!api) does have Amazon's real historical
+data, if you ever want to swap that in instead.)
+
+**You're only notified once per "deal," not every day it's still true.**
+Once an item enters the near-the-low band, `data/alert_state.json` marks
+it as already-notified; it stays quiet on later checks unless the price
+drops even further, or it rises back out of the band and dips into it
+again later.
+
+Two ways to change the threshold itself:
 
 - **Per item** — set a number (via the table page, or by editing
   `products.json`'s `thresholds` object directly) to override just that
@@ -83,26 +108,46 @@ Two ways to change this:
 }
 ```
 
+## Marking something as purchased
+
+Bought it? Click **"Mark purchased"** next to that item on the table page
+- click once to arm the button ("Confirm remove?"), click again within a
+few seconds to confirm. That drops it from `products.json` (and its
+threshold override, if it had one), so it stops being checked and stops
+being able to notify you. Its price history in `data/history.json` is
+left alone, so if you ever add the exact same link again later, it picks
+up right where it left off instead of starting over.
+
+One caveat: this only applies to items added as direct product links. If
+an item came from a **wishlist** and it's still actually on that Amazon
+wishlist, the next check will find it there again and re-add it - you'd
+need to remove it from the Amazon wishlist itself too.
+
 ## Setup
 
 1. **Create the repo.** See "Pushing this to GitHub" below if you're
    starting from these files locally.
 
-2. **Add repository secrets** (Settings → Secrets and variables → Actions →
-   New repository secret):
+2. **Set up push notifications with [ntfy.sh](https://ntfy.sh)** (free, no
+   account needed):
 
-   | Secret | Required | Notes |
-   |---|---|---|
-   | `SMTP_USERNAME` | yes | Your sending email address, e.g. a Gmail address |
-   | `SMTP_PASSWORD` | yes | An **app password**, not your normal password (see below) |
-   | `EMAIL_TO` | yes | Where alerts should be sent — can be the same address |
-   | `SMTP_SERVER` | no | Defaults to `smtp.gmail.com` |
-   | `SMTP_PORT` | no | Defaults to `587` |
+   - Pick a **topic name** - this is like a private channel name. Make it
+     hard to guess (e.g. `aj-amazon-tracker-x7q2`), since anyone who knows
+     it can subscribe to your alerts on the public server.
+   - Install the ntfy app ([iOS](https://apps.apple.com/us/app/ntfy/id1625396347),
+     [Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy)),
+     or use the [web app](https://ntfy.sh/app), and subscribe to that
+     topic name.
+   - Add a repository secret (Settings → Secrets and variables → Actions →
+     New repository secret):
 
-   If you use Gmail: enable 2-Step Verification on the Google account, then
-   create an [App Password](https://myaccount.google.com/apppasswords) and
-   use that as `SMTP_PASSWORD`. Any SMTP provider works (Outlook, Fastmail,
-   SendGrid's SMTP relay, etc.) — just point `SMTP_SERVER`/`SMTP_PORT` at it.
+     | Secret | Required | Notes |
+     |---|---|---|
+     | `NTFY_TOPIC` | yes | The topic name you picked above |
+     | `NTFY_SERVER` | no | Defaults to `https://ntfy.sh` - only set this if self-hosting ntfy |
+
+   That's it - no password, no app-specific setup. Test it any time with
+   `curl -d "test" ntfy.sh/your-topic-name`.
 
 3. **Add products to track**, any of these ways:
 
