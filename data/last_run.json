@@ -1,18 +1,18 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
+      "price": 79.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B08QW7K1JJ",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Klein Tools RT250 GFCI Outlet Tester with LCD Display, Electric Voltage Tester for Standard 3-Wire 120V Electrical Receptacles",
+      "price": 16.0,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B08QW7K1JJ"
     },
@@ -25,5 +25,5 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     }
   ],
-  "timestamp": "2026-08-29T12:10:23.647115+00:00"
+  "timestamp": "2026-08-29T19:36:54.022973+00:00"
 }
