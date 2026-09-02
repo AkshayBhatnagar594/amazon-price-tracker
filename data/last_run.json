@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B08QW7K1JJ",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Klein Tools RT250 GFCI Outlet Tester with LCD Display, Electric Voltage Tester for Standard 3-Wire 120V Electrical Receptacles",
+      "price": 18.34,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B08QW7K1JJ"
     },
@@ -25,12 +25,61 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "no items found on wishlist page - it may be private, empty, or Amazon changed their layout (page title: Amazon.com)",
-      "item_count": 0,
-      "status": "no_items_found",
-      "type": "wishlist",
-      "url": "https://www.amazon.com/hz/wishlist/ls/3N28TSOGMC0MB"
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B073VJPM4Z/"
+    },
+    {
+      "detail": "",
+      "name": "Kasa Smart 3 Way Switch, HS210 KIT, Need Neutral Wire",
+      "price": 25.26,
+      "status": "ok",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B07724HNTX"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B08HRPDBFF",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B08HRPDBFF"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B01EZV35QU"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07K74GWX5",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B07K74GWX5"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B0FNWHSPXF"
+    },
+    {
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+      "price": null,
+      "status": "no_price_found",
+      "type": "product",
+      "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     }
   ],
-  "timestamp": "2026-09-01T20:26:30.900405+00:00"
+  "timestamp": "2026-09-02T05:23:11.636350+00:00"
 }
