@@ -1,7 +1,7 @@
 {
   "https://www.amazon.com/dp/B01EZV35QU": {
-    "last_checked": "2026-09-02T04:10:01.671680+00:00",
-    "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
+    "last_checked": "2026-09-03T16:52:16.722939+00:00",
+    "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
     "price": 11.99
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
@@ -13,6 +13,11 @@
     "last_checked": "2026-09-02T21:31:43.030593+00:00",
     "name": "Kasa Smart 3 Way Switch, HS210 KIT, Need Neutral Wire",
     "price": 25.26
+  },
+  "https://www.amazon.com/dp/B08HRPDBFF": {
+    "last_checked": "2026-09-03T16:52:16.722939+00:00",
+    "name": "Google Nest Thermostat - Smart Thermostat for Home - Programmable Wifi Thermostat - Charcoal",
+    "price": 79.0
   },
   "https://www.amazon.com/dp/B0BHSZN2JV": {
     "last_checked": "2026-08-28T23:49:43.322879+00:00",
@@ -30,7 +35,7 @@
     "price": 373.99
   },
   "https://www.amazon.com/dp/B0FNWHSPXF": {
-    "last_checked": "2026-09-03T07:40:52.081920+00:00",
+    "last_checked": "2026-09-03T16:52:16.722939+00:00",
     "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
     "price": 227.99
   }

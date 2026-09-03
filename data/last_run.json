@@ -33,18 +33,18 @@
       "url": "https://www.amazon.com/dp/B07724HNTX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B08HRPDBFF",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Google Nest Thermostat - Smart Thermostat for Home - Programmable Wifi Thermostat - Charcoal",
+      "price": 79.0,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B08HRPDBFF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
+      "price": 11.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -89,5 +89,5 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],
-  "timestamp": "2026-09-03T07:40:52.081920+00:00"
+  "timestamp": "2026-09-03T16:52:16.722939+00:00"
 }
