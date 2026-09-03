@@ -8,11 +8,6 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "name": "Amazon item B08QW7K1JJ",
-      "original_price": 24.97,
-      "url": "https://www.amazon.com/dp/B08QW7K1JJ"
-    },
-    {
       "name": "Amazon item B0BHSZN2JV",
       "original_price": 152.99,
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
@@ -50,5 +45,6 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     }
   ],
+  "thresholds": {},
   "wishlists": []
 }
