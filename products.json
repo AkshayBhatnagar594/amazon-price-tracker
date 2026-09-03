@@ -47,6 +47,10 @@
     {
       "name": "Amazon item B00LS9UD2M",
       "url": "https://www.amazon.com/dp/B00LS9UD2M"
+    },
+    {
+      "name": "Amazon item B0D84TFF4S",
+      "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],
   "thresholds": {},
