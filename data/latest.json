@@ -1,41 +1,56 @@
 {
+  "https://www.amazon.com/dp/B00LS9UD2M": {
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "LiBa Shower Curtain PEVA 8G, 72x72 Inch Waterproof Clear",
+    "price": 8.49
+  },
   "https://www.amazon.com/dp/B01EZV35QU": {
-    "last_checked": "2026-09-03T16:52:16.722939+00:00",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
     "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
     "price": 11.99
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
-    "last_checked": "2026-09-02T00:38:46.081318+00:00",
-    "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
     "price": 26.99
   },
   "https://www.amazon.com/dp/B07724HNTX": {
-    "last_checked": "2026-09-02T21:31:43.030593+00:00",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
     "name": "Kasa Smart 3 Way Switch, HS210 KIT, Need Neutral Wire",
     "price": 25.26
   },
+  "https://www.amazon.com/dp/B07K74GWX5": {
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "REOLINK RLC-810A PoE Security Camera, 4K Wired Outdoor Surveillance",
+    "price": 84.99
+  },
   "https://www.amazon.com/dp/B08HRPDBFF": {
-    "last_checked": "2026-09-03T16:52:16.722939+00:00",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
     "name": "Google Nest Thermostat - Smart Thermostat for Home - Programmable Wifi Thermostat - Charcoal",
     "price": 79.0
   },
   "https://www.amazon.com/dp/B0BHSZN2JV": {
-    "last_checked": "2026-08-28T23:49:43.322879+00:00",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
     "name": "Modern Crystal Chandelier for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
-    "price": 152.99
+    "price": 162.99
   },
   "https://www.amazon.com/dp/B0CYZFHWMY/": {
-    "last_checked": "2026-08-31T10:24:24.453095+00:00",
-    "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
-    "price": 123.49
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "LED Pendant Light Fixture for Dining Room, 3000K-6500K Dimmable Modern Chandelier, Adjustable Height, 2 Layer Square Minimalist Ceiling Hanging Lamps for Kitchen Island, Living Room, Foyer",
+    "price": 99.99
+  },
+  "https://www.amazon.com/dp/B0D84TFF4S": {
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
+    "price": 19.95
   },
   "https://www.amazon.com/dp/B0F6CSCSBL": {
-    "last_checked": "2026-09-02T04:43:16.794416+00:00",
-    "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
+    "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
     "price": 373.99
   },
   "https://www.amazon.com/dp/B0FNWHSPXF": {
-    "last_checked": "2026-09-03T16:52:16.722939+00:00",
+    "last_checked": "2026-09-04T00:40:06.755596+00:00",
     "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
     "price": 227.99
   }

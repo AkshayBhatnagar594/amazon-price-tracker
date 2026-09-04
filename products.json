@@ -34,10 +34,12 @@
     },
     {
       "name": "Amazon item B07K74GWX5",
+      "original_price": 99.99,
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
       "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "original_price": 39.99,
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
@@ -47,10 +49,12 @@
     },
     {
       "name": "Amazon item B00LS9UD2M",
+      "original_price": 16.99,
       "url": "https://www.amazon.com/dp/B00LS9UD2M"
     },
     {
       "name": "Amazon item B0D84TFF4S",
+      "original_price": 9.98,
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],

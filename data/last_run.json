@@ -1,34 +1,34 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "LED Pendant Light Fixture for Dining Room, 3000K-6500K Dimmable Modern Chandelier, Adjustable Height, 2 Layer Square Minimalist Ceiling Hanging Lamps for Kitchen Island, Living Room, Foyer",
+      "price": 99.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BHSZN2JV",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Crystal Chandelier for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
+      "price": 162.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 26.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07724HNTX",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Kasa Smart 3 Way Switch, HS210 KIT, Need Neutral Wire",
+      "price": 25.26,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07724HNTX"
     },
@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07K74GWX5",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "REOLINK RLC-810A PoE Security Camera, 4K Wired Outdoor Surveillance",
+      "price": 84.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
@@ -65,29 +65,29 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
+      "price": 373.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B00LS9UD2M",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "LiBa Shower Curtain PEVA 8G, 72x72 Inch Waterproof Clear",
+      "price": 8.49,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B00LS9UD2M"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0D84TFF4S",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
+      "price": 19.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],
-  "timestamp": "2026-09-03T16:52:16.722939+00:00"
+  "timestamp": "2026-09-04T00:40:06.755596+00:00"
 }
