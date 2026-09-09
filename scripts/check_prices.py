@@ -57,11 +57,16 @@ DEFAULT_CHECK_INTERVAL_HOURS = 6
 DEFAULT_ALERT_THRESHOLD_PERCENT = 25
 
 PRICE_SELECTORS = [
-    "span.a-price span.a-offscreen",
+    # Scoped to the actual buybox first - a page can have other
+    # span.a-price elements elsewhere (bundles, "frequently bought
+    # together" totals, comparison tables, related items) that render
+    # earlier in the HTML than the real price, so the broad, unscoped
+    # selector below is only a last resort.
+    "#corePriceDisplay_desktop_feature_div span.a-offscreen",
+    "#corePrice_feature_div span.a-offscreen",
     "#priceblock_ourprice",
     "#priceblock_dealprice",
-    "#corePrice_feature_div span.a-offscreen",
-    "#corePriceDisplay_desktop_feature_div span.a-offscreen",
+    "span.a-price span.a-offscreen",
 ]
 
 # Amazon's crossed-out "list price" / "was" price, when it shows one -
@@ -127,6 +132,39 @@ def extract_original_price(soup):
             if price is not None:
                 return price
     return None
+
+
+# If a freshly scraped price is more than this many times the last known
+# price, or less than this fraction of it, it's treated as a probable
+# scrape error rather than a real price - see is_plausible_price().
+PRICE_SANITY_MAX_RATIO = 4.0
+PRICE_SANITY_MIN_RATIO = 0.05
+
+
+def is_plausible_price(price, old_price):
+    """
+    Sanity-checks a freshly scraped price against the last known-good one.
+
+    Amazon occasionally serves something that still looks like a normal,
+    non-blocked product page (real title, no CAPTCHA/interstitial text) but
+    yields a wildly wrong number - e.g. a foreign-currency price shown to
+    whatever IP a GitHub-hosted runner happens to have that run, or a price
+    from an unrelated element elsewhere on the page (a bundle, a
+    "frequently bought together" total, a comparison table) that a CSS
+    selector matched instead of the real buybox price. check_product() has
+    no way to tell that apart from a real price by looking at the page
+    alone, so this catches it after the fact by comparing against history.
+
+    There's nothing to sanity-check against on an item's first-ever
+    successful check, so this only kicks in once there's a prior price.
+    The bounds are deliberately loose (up to 4x higher, down to 5% of the
+    old price) so a genuine steep discount or a real price hike is never
+    mistaken for a scraping error.
+    """
+    if old_price is None or old_price <= 0:
+        return True
+    ratio = price / old_price
+    return PRICE_SANITY_MIN_RATIO <= ratio <= PRICE_SANITY_MAX_RATIO
 
 
 def check_product(url, fallback_name=None):
@@ -384,6 +422,19 @@ def main():
         name, price, original_price, status, detail = check_product(url, fallback_name)
         time.sleep(REQUEST_DELAY_SECONDS)
 
+        old_price = latest.get(norm_url, {}).get("price")
+
+        if status == "ok" and price is not None and not is_plausible_price(price, old_price):
+            detail = (
+                f"got ${price:,.2f} but that's implausible next to the last known price "
+                f"of ${old_price:,.2f} (ratio {price / old_price:.1f}x) - likely a "
+                "foreign-currency page or a stray price element elsewhere on the page; "
+                "ignoring this result and keeping the last known price"
+            )
+            print(f"  [warn] {detail}")
+            status = "implausible_price"
+            price = None
+
         run_log.append({"type": "product", "url": norm_url, "name": name, "status": status, "detail": detail, "price": price})
 
         if price is None:
@@ -402,7 +453,6 @@ def main():
                 products_list[i] = {"url": url, "name": fallback_name or name, "original_price": original_price}
                 products_changed = True
 
-        old_price = latest.get(norm_url, {}).get("price")
         notify, lowest_ever = evaluate_alert(norm_url, price, old_price, history.get(norm_url, []), thresholds.get(norm_url, default_threshold), alert_state)
         if notify:
             changes.append({"name": name, "url": norm_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
@@ -419,12 +469,26 @@ def main():
         run_log.append({"type": "wishlist", "url": wishlist_url, "status": wl_status, "detail": wl_detail, "item_count": len(items)})
 
         for name, product_url, price in items:
-            run_log.append({"type": "wishlist_item", "url": product_url, "name": name, "status": "ok" if price is not None else "no_price_found", "detail": "", "price": price})
+            old_price = latest.get(product_url, {}).get("price")
+            item_status = "ok" if price is not None else "no_price_found"
+            item_detail = ""
+
+            if price is not None and not is_plausible_price(price, old_price):
+                item_detail = (
+                    f"got ${price:,.2f} but that's implausible next to the last known price "
+                    f"of ${old_price:,.2f} (ratio {price / old_price:.1f}x) - likely a "
+                    "foreign-currency page or a stray price element elsewhere on the page; "
+                    "ignoring this result and keeping the last known price"
+                )
+                print(f"  [warn] {item_detail}")
+                item_status = "implausible_price"
+                price = None
+
+            run_log.append({"type": "wishlist_item", "url": product_url, "name": name, "status": item_status, "detail": item_detail, "price": price})
 
             if price is None:
                 continue
 
-            old_price = latest.get(product_url, {}).get("price")
             notify, lowest_ever = evaluate_alert(product_url, price, old_price, history.get(product_url, []), thresholds.get(product_url, default_threshold), alert_state)
             if notify:
                 changes.append({"name": name, "url": product_url, "old_price": old_price, "new_price": price, "lowest_ever": lowest_ever})
