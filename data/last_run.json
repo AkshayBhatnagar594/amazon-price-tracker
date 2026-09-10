@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "",
-      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
-      "price": 123.49,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Modern Pendant Light",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 34.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
+      "price": 270.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -73,5 +73,5 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],
-  "timestamp": "2026-09-09T16:58:55.588105+00:00"
+  "timestamp": "2026-09-10T00:46:30.616972+00:00"
 }
