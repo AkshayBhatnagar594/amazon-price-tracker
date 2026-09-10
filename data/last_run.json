@@ -1,18 +1,18 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
+      "price": 123.49,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BHSZN2JV",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Crystal Chandelier for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
+      "price": 162.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -33,10 +33,10 @@
       "url": "https://www.amazon.com/dp/B07724HNTX"
     },
     {
-      "detail": "",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
-      "price": 11.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -49,18 +49,18 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
+      "price": 269.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
-      "price": 439.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
@@ -73,5 +73,5 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     }
   ],
-  "timestamp": "2026-09-10T10:27:30.863696+00:00"
+  "timestamp": "2026-09-10T18:00:15.126629+00:00"
 }
