@@ -69,6 +69,11 @@
       "name": "Amazon item",
       "original_price": 159.99,
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
+    },
+    {
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
+      "original_price": 79.99,
+      "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     }
   ],
   "thresholds": {},
