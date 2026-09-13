@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-09-13T03:20:22.983322+00:00",
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
     "name": "Amazon item",
     "price": 89.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-09-13T03:21:27.969328+00:00",
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
     "name": "Amazon item",
     "price": 79.99
   },
@@ -15,7 +15,7 @@
     "price": 18.99
   },
   "https://www.amazon.com/dp/B01EZV35QU": {
-    "last_checked": "2026-09-12T13:25:39.382109+00:00",
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
     "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
     "price": 11.99
   },
@@ -34,6 +34,11 @@
     "name": "REOLINK RLC-810A PoE Security Camera, 4K Wired Outdoor Surveillance",
     "price": 99.99
   },
+  "https://www.amazon.com/dp/B07M7L92LW": {
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
+    "name": "AQUA-X 16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
+    "price": 25.99
+  },
   "https://www.amazon.com/dp/B081J7942W": {
     "last_checked": "2026-09-13T03:44:56.516292+00:00",
     "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
@@ -45,14 +50,19 @@
     "price": 14.99
   },
   "https://www.amazon.com/dp/B0B3MKG5NJ": {
-    "last_checked": "2026-09-13T03:22:45.596515+00:00",
-    "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
-    "price": 59.99
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
+    "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
+    "price": 69.99
   },
   "https://www.amazon.com/dp/B0BHSZN2JV": {
     "last_checked": "2026-09-12T13:25:39.382109+00:00",
     "name": "Modern Crystal Chandelier for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
     "price": 162.99
+  },
+  "https://www.amazon.com/dp/B0BM2CVQJD": {
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
+    "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
+    "price": 30.95
   },
   "https://www.amazon.com/dp/B0C48DZJ6Y": {
     "last_checked": "2026-09-13T03:36:35.263508+00:00",
@@ -65,7 +75,7 @@
     "price": 9.99
   },
   "https://www.amazon.com/dp/B0CYZFHWMY/": {
-    "last_checked": "2026-09-12T13:25:39.382109+00:00",
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
     "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
     "price": 123.49
   },
@@ -93,5 +103,10 @@
     "last_checked": "2026-09-13T03:30:18.821055+00:00",
     "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
     "price": 222.22
+  },
+  "https://www.amazon.com/dp/B0GRY5PG1Z": {
+    "last_checked": "2026-09-13T07:55:57.469364+00:00",
+    "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
+    "price": 58.89
   }
 }

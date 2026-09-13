@@ -53,6 +53,7 @@
     },
     {
       "name": "Amazon item B0GRY5PG1Z",
+      "original_price": 61.99,
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
@@ -80,6 +81,7 @@
     },
     {
       "name": "Amazon item B0BM2CVQJD",
+      "original_price": 0.17,
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
@@ -120,6 +122,7 @@
     },
     {
       "name": "Amazon item B07M7L92LW",
+      "original_price": 1.62,
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
