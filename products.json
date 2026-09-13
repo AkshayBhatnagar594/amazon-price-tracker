@@ -46,6 +46,10 @@
       "name": "Amazon item B0D84TFF4S",
       "original_price": 9.98,
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
+    },
+    {
+      "name": "Amazon item B0BCR7M9KX",
+      "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     }
   ],
   "thresholds": {},
