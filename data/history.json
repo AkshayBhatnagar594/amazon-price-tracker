@@ -255,6 +255,12 @@
       "price": 99.99
     }
   ],
+  "https://www.amazon.com/dp/B081J7942W": [
+    {
+      "date": "2026-09-13T03:44:56.516292+00:00",
+      "price": 29.99
+    }
+  ],
   "https://www.amazon.com/dp/B08HRPDBFF": [
     {
       "date": "2026-09-03T16:52:16.722939+00:00",
