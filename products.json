@@ -50,6 +50,11 @@
     {
       "name": "Amazon item B0BCR7M9KX",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
+    },
+    {
+      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
+      "original_price": 249.0,
+      "url": "https://www.amazon.com/dp/B01MXC366M"
     }
   ],
   "thresholds": {},
