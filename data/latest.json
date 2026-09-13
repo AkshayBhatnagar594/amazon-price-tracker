@@ -4,6 +4,11 @@
     "name": "Amazon item",
     "price": 89.99
   },
+  "https://www.amazon.com/clp/B0FZCQDP42": {
+    "last_checked": "2026-09-13T03:21:27.969328+00:00",
+    "name": "Amazon item",
+    "price": 79.99
+  },
   "https://www.amazon.com/dp/B01EZV35QU": {
     "last_checked": "2026-09-12T13:25:39.382109+00:00",
     "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",

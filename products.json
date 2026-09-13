@@ -64,6 +64,11 @@
       "name": "Amazon item",
       "original_price": 106.9,
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
+    },
+    {
+      "name": "Amazon item",
+      "original_price": 159.99,
+      "url": "https://www.amazon.com/clp/B0FZCQDP42"
     }
   ],
   "thresholds": {},
