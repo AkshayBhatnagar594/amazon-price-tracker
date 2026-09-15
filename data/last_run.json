@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 34.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -41,26 +41,26 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-      "price": 239.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
-      "price": 439.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "",
-      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
-      "price": 19.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0D84TFF4S",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -89,10 +89,10 @@
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0D9M1WP59",
       "name": "Amazon item",
-      "price": 91.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
@@ -105,18 +105,18 @@
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "",
-      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
-      "price": 69.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B079J59Z4K",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "TOPGREENER Recessed Duplex Receptacle Outlet, Tamper-Resistant, 2 Pack",
+      "price": 14.39,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
@@ -193,10 +193,10 @@
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
+      "price": 29.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-15T05:42:58.709324+00:00"
+  "timestamp": "2026-09-15T15:25:17.888018+00:00"
 }
