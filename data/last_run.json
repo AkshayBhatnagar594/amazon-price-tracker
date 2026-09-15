@@ -41,26 +41,26 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
+      "price": 239.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
+      "price": 439.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0D84TFF4S",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
+      "price": 19.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -91,7 +91,7 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 89.99,
+      "price": 91.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -99,16 +99,16 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 79.99,
+      "price": 84.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
+      "price": 69.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -177,10 +177,10 @@
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "",
-      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
-      "price": 32.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07L5DPK8P",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-14T21:20:44.042010+00:00"
+  "timestamp": "2026-09-15T05:42:58.709324+00:00"
 }
