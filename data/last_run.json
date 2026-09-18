@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BHSZN2JV",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Crystal Chandelier for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
+      "price": 162.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -57,10 +57,10 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0D84TFF4S",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
+      "price": 19.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "",
       "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-      "price": null,
-      "status": "no_price_found",
+      "price": 254.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0DNRNF6YB",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
+      "price": 39.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -137,10 +137,10 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
+      "price": 29.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -153,10 +153,10 @@
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs",
+      "price": 9.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-17T17:34:38.613893+00:00"
+  "timestamp": "2026-09-18T02:52:14.010660+00:00"
 }
