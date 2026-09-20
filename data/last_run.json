@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-      "price": 239.98,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -137,10 +137,10 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
+      "price": 29.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-20T05:39:08.553879+00:00"
+  "timestamp": "2026-09-20T14:26:43.137507+00:00"
 }
