@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
+      "price": 97.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -57,10 +57,10 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "",
-      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
-      "price": 19.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0D84TFF4S",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -91,7 +91,7 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 93.99,
+      "price": 91.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -129,18 +129,18 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "",
-      "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
-      "price": 30.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BM2CVQJD",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
-      "price": 29.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-20T22:54:15.344479+00:00"
+  "timestamp": "2026-09-21T05:49:02.879591+00:00"
 }
