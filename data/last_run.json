@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "",
-      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
-      "price": 97.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Modern Pendant Light",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -25,10 +25,10 @@
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
+      "price": 11.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -91,7 +91,7 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 91.99,
+      "price": 89.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0DNRNF6YB",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
+      "price": 39.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -177,10 +177,10 @@
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07L5DPK8P",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
+      "price": 28.79,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-21T05:49:02.879591+00:00"
+  "timestamp": "2026-09-21T17:44:00.837094+00:00"
 }

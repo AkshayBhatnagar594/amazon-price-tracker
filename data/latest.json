@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-09-21T05:49:02.879591+00:00",
+    "last_checked": "2026-09-21T17:44:00.837094+00:00",
     "name": "Amazon item",
-    "price": 91.99
+    "price": 89.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-09-21T05:49:02.879591+00:00",
+    "last_checked": "2026-09-21T17:44:00.837094+00:00",
     "name": "Amazon item",
     "price": 84.99
   },
@@ -15,9 +15,9 @@
     "price": 18.99
   },
   "https://www.amazon.com/dp/B01EZV35QU": {
-    "last_checked": "2026-09-19T14:08:00.116425+00:00",
+    "last_checked": "2026-09-21T17:44:00.837094+00:00",
     "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
-    "price": 15.99
+    "price": 11.99
   },
   "https://www.amazon.com/dp/B01MXC366M": {
     "last_checked": "2026-09-18T02:52:14.010660+00:00",
@@ -40,9 +40,9 @@
     "price": 84.99
   },
   "https://www.amazon.com/dp/B07L5DPK8P": {
-    "last_checked": "2026-09-19T14:08:00.116425+00:00",
+    "last_checked": "2026-09-21T17:44:00.837094+00:00",
     "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
-    "price": 32.88
+    "price": 28.79
   },
   "https://www.amazon.com/dp/B07M7L92LW": {
     "last_checked": "2026-09-16T05:52:33.043207+00:00",
@@ -105,7 +105,7 @@
     "price": 19.95
   },
   "https://www.amazon.com/dp/B0DNRNF6YB": {
-    "last_checked": "2026-09-19T22:10:01.057085+00:00",
+    "last_checked": "2026-09-21T17:44:00.837094+00:00",
     "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
     "price": 39.99
   },
