@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 34.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -65,18 +65,18 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BCR7M9KX",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Amazon Echo Hub (newest model), 8\", Redesigned with customizable control and Alexa+, Compatible with thousands of devices",
+      "price": 179.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Nest Smart Learning Wi-Fi Programmable Thermostat, 3rd Gen, Mirror Black",
+      "price": 259.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "",
-      "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
-      "price": 39.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNRNF6YB",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -161,10 +161,10 @@
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
+      "price": 179.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-22T10:50:30.365461+00:00"
+  "timestamp": "2026-09-22T19:30:31.808779+00:00"
 }
