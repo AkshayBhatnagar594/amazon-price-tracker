@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-09-21T17:44:00.837094+00:00",
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
     "name": "Amazon item",
     "price": 89.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-09-21T17:44:00.837094+00:00",
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
     "name": "Amazon item",
     "price": 84.99
   },
@@ -20,9 +20,9 @@
     "price": 11.99
   },
   "https://www.amazon.com/dp/B01MXC366M": {
-    "last_checked": "2026-09-18T02:52:14.010660+00:00",
-    "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-    "price": 254.95
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
+    "name": "Nest Smart Learning Wi-Fi Programmable Thermostat, 3rd Gen, Mirror Black",
+    "price": 269.99
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
     "last_checked": "2026-09-16T22:35:48.536609+00:00",
@@ -50,7 +50,7 @@
     "price": 25.99
   },
   "https://www.amazon.com/dp/B081J7942W": {
-    "last_checked": "2026-09-16T05:52:33.043207+00:00",
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
     "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
     "price": 29.99
   },
@@ -95,7 +95,7 @@
     "price": 97.99
   },
   "https://www.amazon.com/dp/B0CZ2MN5MF": {
-    "last_checked": "2026-09-20T22:54:15.344479+00:00",
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
     "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
     "price": 29.99
   },
@@ -130,7 +130,7 @@
     "price": 179.99
   },
   "https://www.amazon.com/dp/B0GRY5PG1Z": {
-    "last_checked": "2026-09-19T14:08:00.116425+00:00",
+    "last_checked": "2026-09-22T00:31:46.026291+00:00",
     "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
     "price": 58.89
   }
