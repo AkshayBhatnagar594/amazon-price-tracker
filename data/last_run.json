@@ -73,18 +73,18 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "",
-      "name": "Nest Smart Learning Wi-Fi Programmable Thermostat, 3rd Gen, Mirror Black",
-      "price": 269.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "",
-      "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
-      "price": 58.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0GRY5PG1Z",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
@@ -97,10 +97,10 @@
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 84.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0DNRNF6YB",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
+      "price": 39.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -137,10 +137,10 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
-      "price": 29.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -193,10 +193,10 @@
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
-      "price": 29.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-22T00:31:46.026291+00:00"
+  "timestamp": "2026-09-22T10:50:30.365461+00:00"
 }
