@@ -25,10 +25,10 @@
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
-      "price": 11.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
+      "price": 229.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -177,10 +177,10 @@
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07L5DPK8P",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
+      "price": 28.79,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
@@ -209,13 +209,13 @@
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "",
-      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
-      "price": 18.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-25T21:56:59.904949+00:00"
+  "timestamp": "2026-09-26T05:46:56.569506+00:00"
 }
