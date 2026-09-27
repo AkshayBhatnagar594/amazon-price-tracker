@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
-      "price": 34.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -33,10 +33,10 @@
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
     {
-      "detail": "",
-      "name": "REOLINK RLC-810A PoE Security Camera, 4K Wired Outdoor Surveillance",
-      "price": 99.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07K74GWX5",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
@@ -209,13 +209,13 @@
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
+      "price": 18.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-27T12:39:44.180173+00:00"
+  "timestamp": "2026-09-27T20:45:09.829480+00:00"
 }
