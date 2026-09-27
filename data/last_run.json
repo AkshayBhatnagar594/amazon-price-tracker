@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-      "price": 229.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -57,10 +57,10 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "",
-      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
-      "price": 19.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0D84TFF4S",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "",
       "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-      "price": null,
-      "status": "no_price_found",
+      "price": 219.0,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -97,10 +97,10 @@
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 84.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BM2CVQJD",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
+      "price": 19.94,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0DNYLXQJH",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
+      "price": 89.6,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-26T21:45:25.820920+00:00"
+  "timestamp": "2026-09-27T06:06:29.171146+00:00"
 }
