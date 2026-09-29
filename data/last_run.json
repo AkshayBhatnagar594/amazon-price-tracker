@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
-      "price": 373.98,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
@@ -65,10 +65,10 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "",
-      "name": "Amazon Echo Hub (newest model), 8\", Redesigned with customizable control and Alexa+, Compatible with thousands of devices",
-      "price": 179.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BCR7M9KX",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
@@ -81,18 +81,18 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "",
-      "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
-      "price": 58.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0GRY5PG1Z",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0D9M1WP59",
+      "detail": "",
       "name": "Amazon item",
-      "price": null,
-      "status": "request_error",
+      "price": 91.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
@@ -113,10 +113,10 @@
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B079J59Z4K",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "TOPGREENER Recessed Duplex Receptacle Outlet, Tamper-Resistant, 2 Pack",
+      "price": 15.39,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
@@ -161,10 +161,10 @@
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "",
-      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
-      "price": 179.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-29T10:21:03.338169+00:00"
+  "timestamp": "2026-09-29T16:44:50.378239+00:00"
 }
