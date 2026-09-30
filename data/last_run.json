@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level with Tripod, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 49.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -97,10 +97,10 @@
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 84.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -153,10 +153,10 @@
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs",
+      "price": 8.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-09-29T16:44:50.378239+00:00"
+  "timestamp": "2026-09-30T00:58:51.853558+00:00"
 }
