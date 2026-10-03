@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
+      "price": 69.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -81,10 +81,10 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "",
-      "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
-      "price": 58.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0GRY5PG1Z",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
@@ -105,10 +105,10 @@
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "",
-      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
-      "price": 59.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "",
-      "name": "Voipvvii Folding Hand Truck 500lbs, Portable Heavy Duty Dolly Cart, 6 Wheels Collapsible Luggage Cart with 2 Elastic Ropes - Compact Trolley Cart for Easy Moving - Ideal Hand Cart for Travel and More",
-      "price": 39.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNRNF6YB",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -145,10 +145,10 @@
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V Led Light Strip 6500K Daylight White 900 LEDs Lights for Bedroom, Mirror, Kitchen, Strong Adhesive\uff082 Rolls of 25ft\uff09",
+      "price": 18.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "",
-      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
-      "price": 84.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNYLXQJH",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-02T22:47:33.527774+00:00"
+  "timestamp": "2026-10-03T07:29:28.765279+00:00"
 }
