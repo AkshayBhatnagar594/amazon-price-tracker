@@ -105,10 +105,10 @@
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "",
-      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
-      "price": 59.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "",
-      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
-      "price": 84.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNYLXQJH",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-05T08:10:16.731417+00:00"
+  "timestamp": "2026-10-05T17:45:55.362436+00:00"
 }
