@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Modern Pendant Light",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Pendant Light Fixture, LED Black Chandelier for Kitchen Island, 2 Layer Rectangle Adjustable Height, Dimmable 3000K-6500K Ceiling Hanging Light for Dining Room Table, Bedroom, Living Room",
+      "price": 69.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-      "price": 204.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -89,18 +89,18 @@
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item",
-      "price": 91.99,
-      "status": "ok",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item",
-      "price": 84.99,
-      "status": "ok",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BM2CVQJD",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
+      "price": 24.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -153,10 +153,10 @@
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "",
-      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs",
-      "price": 8.49,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
@@ -201,10 +201,10 @@
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07M7L92LW",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "AQUA-X 16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
+      "price": 25.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-06T17:48:34.652391+00:00"
+  "timestamp": "2026-10-07T02:00:16.925622+00:00"
 }
