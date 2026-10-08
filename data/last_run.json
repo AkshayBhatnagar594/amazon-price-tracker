@@ -49,8 +49,8 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com: UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers | Photo & Video Backup, AI Photo Album, File Hub, Private Cloud & Secure Home Surveillance, 8GB LPDDR4X, 4K HDMI (Diskless) : Electronics | body snippet: Amazon.com: UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers | Photo & Video Backup, AI Photo Album, File Hub, Private Cloud & Secure Home Surveillance, 8GB LPDDR4X, 4K HDMI (Diskless) : Electronics Skip to Main content About t",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
       "price": null,
       "status": "no_price_found",
       "type": "product",
@@ -97,10 +97,10 @@
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "",
-      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
-      "price": 71.67,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNYLXQJH",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -201,21 +201,21 @@
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07M7L92LW",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "AQUA-X 16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
+      "price": 25.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "",
-      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
-      "price": 18.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-07T17:10:30.753891+00:00"
+  "timestamp": "2026-10-08T02:24:41.308037+00:00"
 }
