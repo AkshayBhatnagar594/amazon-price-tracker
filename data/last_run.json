@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "",
-      "name": "Modern Crystal Chandeliers for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
-      "price": 146.69,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BHSZN2JV",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -89,24 +89,24 @@
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "",
+      "detail": "page title: open prime modal | body snippet: Skip to Main content Keyboard shortcuts Search alt + / Cart shift + alt + C Home shift + alt + H Orders shift + alt + O Show/Hide shortcuts shift + alt + Z To move between items, use your keyboard's up or down arrows. .us Deliver to Mexico All Select the department you want to search in All Departme",
       "name": "Amazon item",
-      "price": 93.99,
-      "status": "ok",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 84.99,
+      "price": 79.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
+      "detail": "page title: Amazon.com: Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13) : Home & Kitchen | body snippet: Amazon.com: Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13) : Home & Kitchen Skip to Main conte",
+      "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
       "price": null,
       "status": "no_price_found",
       "type": "product",
@@ -161,10 +161,10 @@
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "",
+      "detail": "page title: Amazon.com - KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day | Dehumidifier with Drain Hose, Dehumidifiers for Home, Bedroom, Bathroom, Large Room, Smart Humidity Control, Sleep Mode | body snippet: Amazon.com - KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day | Dehumidifier with Drain Hose, Dehumidifiers for Home, Bedroom, Bathroom, Large Room, Smart Humidity Control, Sleep Mode Skip to Main content About this item About this item About t",
       "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
-      "price": 179.99,
-      "status": "ok",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-12T23:25:42.630180+00:00"
+  "timestamp": "2026-10-13T13:24:35.467594+00:00"
 }
