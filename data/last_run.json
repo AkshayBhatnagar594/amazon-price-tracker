@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
+      "price": 399.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
@@ -153,26 +153,26 @@
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs",
+      "price": 8.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "",
-      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
-      "price": 179.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "",
-      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
-      "price": 84.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0DNYLXQJH",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -185,18 +185,18 @@
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, C325WB",
+      "price": 74.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
-      "price": 29.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-15T07:56:41.037033+00:00"
+  "timestamp": "2026-10-15T17:57:51.550042+00:00"
 }
