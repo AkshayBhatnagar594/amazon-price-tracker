@@ -17,18 +17,18 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
-      "price": 27.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
+      "price": 15.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -81,17 +81,17 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "",
-      "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
-      "price": 58.89,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0GRY5PG1Z",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 159.99,
+      "price": 97.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -201,10 +201,10 @@
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "",
-      "name": "AQUA-X 16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
-      "price": 25.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07M7L92LW",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-20T01:29:06.869701+00:00"
+  "timestamp": "2026-10-20T13:14:23.888132+00:00"
 }
