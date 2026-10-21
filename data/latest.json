@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-10-20T22:01:38.954439+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "Amazon item",
-    "price": 149.99
+    "price": 89.9
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-10-20T22:01:38.954439+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "Amazon item",
     "price": 79.99
   },
@@ -70,7 +70,7 @@
     "price": 179.99
   },
   "https://www.amazon.com/dp/B0BHSZN2JV": {
-    "last_checked": "2026-10-19T11:55:39.727079+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "Modern Crystal Chandeliers for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
     "price": 146.69
   },
@@ -80,7 +80,7 @@
     "price": 24.95
   },
   "https://www.amazon.com/dp/B0C48DZJ6Y": {
-    "last_checked": "2026-10-19T11:55:39.727079+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-In, C325WB",
     "price": 59.98
   },
@@ -120,12 +120,12 @@
     "price": 399.99
   },
   "https://www.amazon.com/dp/B0FNWHSPXF": {
-    "last_checked": "2026-10-19T11:55:39.727079+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-    "price": 239.99
+    "price": 239.0
   },
   "https://www.amazon.com/dp/B0GN26KP3D": {
-    "last_checked": "2026-10-19T18:17:16.810844+00:00",
+    "last_checked": "2026-10-21T06:56:30.812962+00:00",
     "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
     "price": 179.99
   },
