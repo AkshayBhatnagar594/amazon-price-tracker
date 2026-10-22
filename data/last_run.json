@@ -25,10 +25,10 @@
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire, HS200",
+      "price": 15.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-      "price": 239.0,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Google Nest Learning Thermostat - Programmable Smart Thermostat for Home - 3rd Generation- Works with Alexa - White",
+      "price": 99.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -91,16 +91,16 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 99.99,
+      "price": 149.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
+      "detail": "",
       "name": "Amazon item",
-      "price": null,
-      "status": "request_error",
+      "price": 79.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -153,18 +153,18 @@
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs",
+      "price": 8.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "",
-      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
-      "price": 179.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-21T17:50:57.421953+00:00"
+  "timestamp": "2026-10-22T00:22:49.114478+00:00"
 }
