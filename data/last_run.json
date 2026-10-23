@@ -57,18 +57,18 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0D84TFF4S",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
+      "price": 19.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BCR7M9KX",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Amazon Echo Hub (newest model), 8\", Redesigned with customizable control and Alexa+, Compatible with thousands of devices",
+      "price": 179.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
@@ -91,16 +91,16 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 179.99,
+      "price": 120.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 79.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BM2CVQJD",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
+      "price": 19.94,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-22T20:22:52.444963+00:00"
+  "timestamp": "2026-10-23T03:04:38.110947+00:00"
 }
