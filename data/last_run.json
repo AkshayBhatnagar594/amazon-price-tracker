@@ -91,7 +91,7 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 99.99,
+      "price": 82.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "",
-      "name": "Storeganize Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
-      "price": 19.94,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BM2CVQJD",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -145,10 +145,10 @@
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V Led Light Strip 6500K Daylight White 900 LEDs Lights for Bedroom, Mirror, Kitchen, Strong Adhesive\uff082 Rolls of 25ft\uff09",
+      "price": 14.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-23T14:36:10.082400+00:00"
+  "timestamp": "2026-10-23T21:47:51.591348+00:00"
 }
