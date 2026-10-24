@@ -1,8 +1,8 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-10-24T14:12:25.701441+00:00",
+    "last_checked": "2026-10-24T22:49:46.195231+00:00",
     "name": "Amazon item",
-    "price": 99.99
+    "price": 39.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
     "last_checked": "2026-10-24T14:12:25.701441+00:00",
@@ -45,8 +45,8 @@
     "price": 31.99
   },
   "https://www.amazon.com/dp/B07M7L92LW": {
-    "last_checked": "2026-10-20T01:29:06.869701+00:00",
-    "name": "AQUA-X 16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
+    "last_checked": "2026-10-24T22:49:46.195231+00:00",
+    "name": "16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
     "price": 25.99
   },
   "https://www.amazon.com/dp/B081J7942W": {
@@ -115,7 +115,7 @@
     "price": 79.99
   },
   "https://www.amazon.com/dp/B0F6CSCSBL": {
-    "last_checked": "2026-10-19T11:55:39.727079+00:00",
+    "last_checked": "2026-10-24T22:49:46.195231+00:00",
     "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
     "price": 399.99
   },

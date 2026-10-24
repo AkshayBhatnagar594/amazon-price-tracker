@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "",
-      "name": "Modern Crystal Chandeliers for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
-      "price": 146.69,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0BHSZN2JV",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
+      "price": 399.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
@@ -91,16 +91,16 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 99.99,
+      "price": 39.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 79.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -193,18 +193,18 @@
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
-      "price": 29.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07M7L92LW",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
+      "price": 25.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-24T14:12:25.701441+00:00"
+  "timestamp": "2026-10-24T22:49:46.195231+00:00"
 }
