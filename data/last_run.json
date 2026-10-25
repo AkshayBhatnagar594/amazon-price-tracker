@@ -49,10 +49,10 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "",
-      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
-      "price": 399.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
@@ -81,26 +81,26 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0GRY5PG1Z",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
+      "price": 58.89,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 39.99,
+      "price": 89.9,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
+      "detail": "",
       "name": "Amazon item",
-      "price": null,
-      "status": "request_error",
+      "price": 79.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
@@ -201,10 +201,10 @@
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "",
-      "name": "16 Oz. Grout Sealer, Clear Grout and Tile Sealer, Natural Finish, Professional Grade, Indoor & Outdoor, Fast Dry and Long Lasting Protection",
-      "price": 25.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07M7L92LW",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-10-24T22:49:46.195231+00:00"
+  "timestamp": "2026-10-25T05:35:53.831980+00:00"
 }
