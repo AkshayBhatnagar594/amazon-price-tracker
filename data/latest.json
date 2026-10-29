@@ -1,16 +1,16 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-10-29T11:14:30.997604+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "Amazon item",
     "price": 103.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-10-29T11:14:30.997604+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "Amazon item",
     "price": 76.49
   },
   "https://www.amazon.com/dp/B01AB21E4M": {
-    "last_checked": "2026-10-19T11:55:39.727079+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
     "price": 18.99
   },
@@ -60,7 +60,7 @@
     "price": 14.99
   },
   "https://www.amazon.com/dp/B0B3MKG5NJ": {
-    "last_checked": "2026-10-27T21:44:37.023447+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
     "price": 59.99
   },
@@ -110,9 +110,9 @@
     "price": 39.99
   },
   "https://www.amazon.com/dp/B0DNYLXQJH": {
-    "last_checked": "2026-10-22T11:01:34.671013+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
-    "price": 79.99
+    "price": 89.6
   },
   "https://www.amazon.com/dp/B0F6CSCSBL": {
     "last_checked": "2026-10-28T13:46:03.514185+00:00",
@@ -120,9 +120,9 @@
     "price": 373.99
   },
   "https://www.amazon.com/dp/B0FNWHSPXF": {
-    "last_checked": "2026-10-21T17:50:57.421953+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users, Phone Backup",
-    "price": 239.0
+    "price": 239.99
   },
   "https://www.amazon.com/dp/B0GN26KP3D": {
     "last_checked": "2026-10-29T11:14:30.997604+00:00",
@@ -130,7 +130,7 @@
     "price": 179.98
   },
   "https://www.amazon.com/dp/B0GRY5PG1Z": {
-    "last_checked": "2026-10-25T14:44:14.734803+00:00",
+    "last_checked": "2026-10-29T17:56:04.856001+00:00",
     "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
     "price": 58.89
   }
