@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "",
-      "name": "Google Nest Programmable Learning Thermostat with Temperature Sensor, 3rd Generation, White",
-      "price": 259.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -137,10 +137,10 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
+      "price": 29.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-01T09:58:57.081139+00:00"
+  "timestamp": "2026-11-01T16:41:47.404250+00:00"
 }
