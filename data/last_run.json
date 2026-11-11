@@ -89,10 +89,10 @@
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0D9M1WP59",
+      "detail": "",
       "name": "Amazon item",
-      "price": null,
-      "status": "request_error",
+      "price": 103.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
@@ -193,10 +193,10 @@
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
-      "price": 34.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-11T12:22:27.277638+00:00"
+  "timestamp": "2026-11-11T19:58:07.084437+00:00"
 }
