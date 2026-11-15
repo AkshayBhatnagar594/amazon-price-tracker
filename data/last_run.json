@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
+      "price": 32.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BM2CVQJD",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Flour Sugar Storage Containers (5.3L/4pk) Great Rice Canisters Sets For The Kitchen pantry, Large Food Storage Containers With Lids Airtight",
+      "price": 24.95,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -209,13 +209,13 @@
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "",
-      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
-      "price": 18.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-15T07:28:19.694954+00:00"
+  "timestamp": "2026-11-15T15:14:20.101091+00:00"
 }
