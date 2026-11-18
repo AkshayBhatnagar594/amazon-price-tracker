@@ -1,18 +1,18 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CYZFHWMY/",
       "name": "Modern Pendant Light",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BHSZN2JV",
       "name": "Amazon item B0BHSZN2JV",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -65,26 +65,26 @@
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BCR7M9KX",
       "name": "Amazon item B0BCR7M9KX",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B01MXC366M",
       "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0GRY5PG1Z",
       "name": "Amazon item B0GRY5PG1Z",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
@@ -97,18 +97,18 @@
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
     {
-      "detail": "",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0FZCQDP42",
       "name": "Amazon item",
-      "price": 84.99,
-      "status": "ok",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0B3MKG5NJ",
       "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -121,18 +121,18 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNRNF6YB",
       "name": "Amazon item B0DNRNF6YB",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BM2CVQJD",
       "name": "Amazon item B0BM2CVQJD",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -145,18 +145,18 @@
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B09SHJ6WT5",
       "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CFGYFCYL",
       "name": "OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNYLXQJH",
       "name": "Amazon item B0DNYLXQJH",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -185,37 +185,37 @@
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0C48DZJ6Y",
       "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B081J7942W",
       "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B07M7L92LW",
       "name": "Amazon item B07M7L92LW",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B01AB21E4M",
       "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-18T02:01:03.020129+00:00"
+  "timestamp": "2026-11-18T10:59:59.757491+00:00"
 }
