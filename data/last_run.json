@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "",
-      "name": "Modern Crystal Chandeliers for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
-      "price": 162.99,
-      "status": "ok",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BHSZN2JV",
+      "name": "Amazon item B0BHSZN2JV",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -41,10 +41,10 @@
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0FNWHSPXF",
       "name": "UGREEN NAS DH2300 2-Bay for Beginners & Personal Users...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
@@ -91,7 +91,7 @@
     {
       "detail": "",
       "name": "Amazon item",
-      "price": 99.99,
+      "price": 95.99,
       "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
@@ -129,10 +129,10 @@
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BM2CVQJD",
       "name": "Amazon item B0BM2CVQJD",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
@@ -169,18 +169,18 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0DNYLXQJH",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Motorized Blinds No Drill Automatic Blinds for Windows Cordless Roller Shades Electric Blinds with Remote Control Smart Blinds (Grey, 34.5 x 72)",
+      "price": 89.6,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B07L5DPK8P",
       "name": "Amazon item B07L5DPK8P",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
@@ -193,18 +193,18 @@
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B081J7942W",
       "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B07M7L92LW",
       "name": "Amazon item B07M7L92LW",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-19T01:38:10.871084+00:00"
+  "timestamp": "2026-11-19T09:46:49.445270+00:00"
 }
