@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-11-20T17:28:57.181005+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "Amazon item",
     "price": 95.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-11-20T17:28:57.181005+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "Amazon item",
     "price": 84.99
   },
@@ -25,9 +25,9 @@
     "price": 79.99
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
-    "last_checked": "2026-11-17T10:02:22.967967+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
-    "price": 32.99
+    "price": 26.5
   },
   "https://www.amazon.com/dp/B079J59Z4K": {
     "last_checked": "2026-11-19T18:47:44.092024+00:00",
@@ -60,7 +60,7 @@
     "price": 18.99
   },
   "https://www.amazon.com/dp/B0B3MKG5NJ": {
-    "last_checked": "2026-11-19T18:47:44.092024+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron Board with 4 Layered Cover & Pad, Height Adjustable up to 36\" Features A Safety Iron Rest, 4 Steel Legs, for Laundry Room or Dorm Use (43x13)",
     "price": 69.99
   },
@@ -100,7 +100,7 @@
     "price": 29.99
   },
   "https://www.amazon.com/dp/B0D84TFF4S": {
-    "last_checked": "2026-11-15T00:39:46.174813+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
     "price": 19.95
   },
@@ -115,9 +115,9 @@
     "price": 89.6
   },
   "https://www.amazon.com/dp/B0F6CSCSBL": {
-    "last_checked": "2026-11-03T07:29:41.587314+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users & Remote Workers",
-    "price": 379.99
+    "price": 351.99
   },
   "https://www.amazon.com/dp/B0FNWHSPXF": {
     "last_checked": "2026-11-16T07:34:18.386444+00:00",
@@ -130,8 +130,8 @@
     "price": 179.98
   },
   "https://www.amazon.com/dp/B0GRY5PG1Z": {
-    "last_checked": "2026-11-08T21:36:28.489786+00:00",
+    "last_checked": "2026-11-20T23:36:15.871263+00:00",
     "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
-    "price": 61.99
+    "price": 52.69
   }
 }
