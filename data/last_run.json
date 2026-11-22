@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CYZFHWMY/",
       "name": "Modern Pendant Light",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B073VJPM4Z/",
       "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -49,26 +49,26 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0F6CSCSBL",
       "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0D84TFF4S",
       "name": "Amazon item B0D84TFF4S",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BCR7M9KX",
       "name": "Amazon item B0BCR7M9KX",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
@@ -81,18 +81,18 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0GRY5PG1Z",
       "name": "Amazon item B0GRY5PG1Z",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/clp/B0D9M1WP59",
+      "detail": "",
       "name": "Amazon item",
-      "price": null,
-      "status": "request_error",
+      "price": 95.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/clp/B0D9M1WP59"
     },
@@ -105,10 +105,10 @@
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0B3MKG5NJ",
       "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNRNF6YB",
       "name": "Amazon item B0DNRNF6YB",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -137,18 +137,18 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CZ2MN5MF",
       "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B09SHJ6WT5",
       "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
@@ -169,10 +169,10 @@
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNYLXQJH",
       "name": "Amazon item B0DNYLXQJH",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
@@ -185,18 +185,18 @@
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0C48DZJ6Y",
       "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
       "price": null,
-      "status": "no_price_found",
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "",
-      "name": "Chef's Path Extra Large Airtight Food Storage Containers with Lids, Pack of 2, 6.5L, 220Oz, Airtight Kitchen and Pantry Bulk Canisters for Flour, Sugar, Rice, and Baking Supplies - Transparent",
-      "price": 34.99,
-      "status": "ok",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B081J7942W",
+      "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -209,13 +209,13 @@
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "",
-      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18 fl oz",
-      "price": 18.99,
-      "status": "ok",
+      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B01AB21E4M",
+      "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
+      "price": null,
+      "status": "request_error",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-21T20:44:09.334195+00:00"
+  "timestamp": "2026-11-22T07:42:24.015017+00:00"
 }
