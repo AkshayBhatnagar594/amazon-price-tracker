@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CYZFHWMY/",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Modern Pendant Light",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -17,10 +17,10 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B073VJPM4Z/",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
@@ -49,26 +49,26 @@
       "url": "https://www.amazon.com/dp/B0FNWHSPXF"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0F6CSCSBL",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "UGREEN NAS DH4300 Plus 4-Bay for Beginners, Home Users &...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0D84TFF4S",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B0D84TFF4S",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0BCR7M9KX",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B0BCR7M9KX",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
@@ -81,10 +81,10 @@
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0GRY5PG1Z",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B0GRY5PG1Z",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GRY5PG1Z"
     },
@@ -105,10 +105,10 @@
       "url": "https://www.amazon.com/clp/B0FZCQDP42"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0B3MKG5NJ",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Bartnelli by Rorets Ironing Board Made in Europe | Iron...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
@@ -121,10 +121,10 @@
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNRNF6YB",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B0DNRNF6YB",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNRNF6YB"
     },
@@ -137,18 +137,18 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CZ2MN5MF",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B09SHJ6WT5",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B09SHJ6WT5"
     },
@@ -161,42 +161,42 @@
       "url": "https://www.amazon.com/dp/B0CFGYFCYL"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max...",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "KNKA Energy Star 5500 Sq.Ft Dehumidifier for Basement, Max 80 Pint/Day",
+      "price": 169.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0GN26KP3D"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0DNYLXQJH",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B0DNYLXQJH",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B07L5DPK8P",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
+      "price": 27.19,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0C48DZJ6Y",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B081J7942W",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Chef's Path Extra Large Airtight Food Storage Containers...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B081J7942W"
     },
@@ -209,13 +209,13 @@
       "url": "https://www.amazon.com/dp/B07M7L92LW"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B01AB21E4M",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "TriNova Granite Sealer & Protector for Stone Surfaces, 18...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-22T07:42:24.015017+00:00"
+  "timestamp": "2026-11-22T15:51:28.219013+00:00"
 }
