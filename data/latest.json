@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-11-23T11:41:34.492739+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "Amazon item",
     "price": 89.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-11-23T11:41:34.492739+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "Amazon item",
     "price": 84.99
   },
@@ -20,12 +20,12 @@
     "price": 15.99
   },
   "https://www.amazon.com/dp/B01MXC366M": {
-    "last_checked": "2026-11-16T17:49:41.590324+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "Google Nest Programmable Learning Thermostat with Temperature Sensor, 3rd Generation, White",
     "price": 79.99
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
-    "last_checked": "2026-11-20T23:36:15.871263+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line Laser",
     "price": 26.5
   },
@@ -55,9 +55,9 @@
     "price": 34.99
   },
   "https://www.amazon.com/dp/B09SHJ6WT5": {
-    "last_checked": "2026-11-16T07:34:18.386444+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "dalattin White LED Strip Lights 50ft Dimmable Bright 24V Led Light Strip 6500K Daylight White 900 LEDs Lights for Bedroom, Mirror, Kitchen, Strong Adhesive\uff082 Rolls of 25ft\uff09",
-    "price": 18.99
+    "price": 14.24
   },
   "https://www.amazon.com/dp/B0B3MKG5NJ": {
     "last_checked": "2026-11-20T23:36:15.871263+00:00",
@@ -130,7 +130,7 @@
     "price": 169.99
   },
   "https://www.amazon.com/dp/B0GRY5PG1Z": {
-    "last_checked": "2026-11-23T11:41:34.492739+00:00",
+    "last_checked": "2026-11-23T23:16:01.603291+00:00",
     "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
     "price": 52.69
   }
