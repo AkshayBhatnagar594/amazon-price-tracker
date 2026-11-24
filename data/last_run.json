@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0CYZFHWMY/",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Modern Pendant Light",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
@@ -17,26 +17,26 @@
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B073VJPM4Z/",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Huepar Laser Level, 100Ft Self Leveling Green Cross Line...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B073VJPM4Z/"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B01EZV35QU",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Kasa Smart Light Switch, Single Pole, Need Neutral Wire...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01EZV35QU"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B07K74GWX5",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B07K74GWX5",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07K74GWX5"
     },
@@ -57,10 +57,10 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "",
-      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
-      "price": 19.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0D84TFF4S",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Google Nest Programmable Learning Thermostat with Temperature Sensor, 3rd Generation, White",
+      "price": 79.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -113,10 +113,10 @@
       "url": "https://www.amazon.com/dp/B0B3MKG5NJ"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B079J59Z4K",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Amazon item B079J59Z4K",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B079J59Z4K"
     },
@@ -137,10 +137,10 @@
       "url": "https://www.amazon.com/dp/B0BM2CVQJD"
     },
     {
-      "detail": "",
-      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids BPA Free Plastic",
-      "price": 28.49,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Shazo 6 PC 1.2L Airtight Food Storage Containers with Lids...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0CZ2MN5MF"
     },
@@ -177,18 +177,18 @@
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B07L5DPK8P",
-      "name": "Amazon item B07L5DPK8P",
-      "price": null,
-      "status": "request_error",
+      "detail": "",
+      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
+      "price": 27.19,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "503 Server Error: Service Unavailable for url: https://www.amazon.com/dp/B0C48DZJ6Y",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
       "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
       "price": null,
-      "status": "request_error",
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-24T08:03:41.021369+00:00"
+  "timestamp": "2026-11-24T19:52:36.561196+00:00"
 }
