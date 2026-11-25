@@ -9,10 +9,10 @@
       "url": "https://www.amazon.com/dp/B0CYZFHWMY/"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BHSZN2JV",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Modern Crystal Chandeliers for Dining Room,8 Light Black and Gold Linear Dining Room Light Fixture Adjustable Height Hanging Ceiling Light for Kitchen Island Over Table Living Room",
+      "price": 162.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BHSZN2JV"
     },
@@ -73,10 +73,10 @@
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
     {
-      "detail": "",
-      "name": "Google Nest Programmable Learning Thermostat with Temperature Sensor, 3rd Generation, White",
-      "price": 79.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Nest T3017US Nest Learning Thermostat - 3rd Generation",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B01MXC366M"
     },
@@ -177,10 +177,10 @@
       "url": "https://www.amazon.com/dp/B0DNYLXQJH"
     },
     {
-      "detail": "",
-      "name": "meross Smart WiFi Garage Door Opener Remote Work with Alexa and Google",
-      "price": 27.19,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B07L5DPK8P",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-24T19:52:36.561196+00:00"
+  "timestamp": "2026-11-25T03:19:03.785072+00:00"
 }
