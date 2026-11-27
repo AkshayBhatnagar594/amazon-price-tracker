@@ -1,11 +1,11 @@
 {
   "https://www.amazon.com/clp/B0D9M1WP59": {
-    "last_checked": "2026-11-26T23:26:53.321897+00:00",
+    "last_checked": "2026-11-27T06:23:03.593579+00:00",
     "name": "Amazon item",
     "price": 89.99
   },
   "https://www.amazon.com/clp/B0FZCQDP42": {
-    "last_checked": "2026-11-26T23:26:53.321897+00:00",
+    "last_checked": "2026-11-27T06:23:03.593579+00:00",
     "name": "Amazon item",
     "price": 84.99
   },
@@ -20,9 +20,9 @@
     "price": 15.99
   },
   "https://www.amazon.com/dp/B01MXC366M": {
-    "last_checked": "2026-11-24T19:52:36.561196+00:00",
+    "last_checked": "2026-11-27T06:23:03.593579+00:00",
     "name": "Google Nest Programmable Learning Thermostat with Temperature Sensor, 3rd Generation, White",
-    "price": 79.99
+    "price": 193.95
   },
   "https://www.amazon.com/dp/B073VJPM4Z/": {
     "last_checked": "2026-11-23T23:16:01.603291+00:00",
@@ -65,7 +65,7 @@
     "price": 69.99
   },
   "https://www.amazon.com/dp/B0BCR7M9KX": {
-    "last_checked": "2026-11-26T23:26:53.321897+00:00",
+    "last_checked": "2026-11-27T06:23:03.593579+00:00",
     "name": "Amazon Echo Hub (newest model), 8\", Redesigned with customizable control and Alexa+, Smart home hub compatible with thousands of devices",
     "price": 74.99
   },
@@ -130,7 +130,7 @@
     "price": 169.99
   },
   "https://www.amazon.com/dp/B0GRY5PG1Z": {
-    "last_checked": "2026-11-23T23:16:01.603291+00:00",
+    "last_checked": "2026-11-27T06:23:03.593579+00:00",
     "name": "hykolity 16 inch Dimmable LED Flush Mount Ceiling Light Fixture,36W,2200LM",
     "price": 52.69
   }
