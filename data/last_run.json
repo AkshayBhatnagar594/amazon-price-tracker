@@ -57,18 +57,18 @@
       "url": "https://www.amazon.com/dp/B0F6CSCSBL"
     },
     {
-      "detail": "",
-      "name": "JJ KENT Captain Clearit Window Cleaner Sponge for Windshields, 2 Pack",
-      "price": 19.95,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Amazon item B0D84TFF4S",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0D84TFF4S"
     },
     {
-      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
-      "name": "Amazon item B0BCR7M9KX",
-      "price": null,
-      "status": "no_price_found",
+      "detail": "",
+      "name": "Amazon Echo Hub (newest model), 8\", Redesigned with customizable control and Alexa+, Smart home hub compatible with thousands of devices",
+      "price": 74.99,
+      "status": "ok",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0BCR7M9KX"
     },
@@ -185,10 +185,10 @@
       "url": "https://www.amazon.com/dp/B07L5DPK8P"
     },
     {
-      "detail": "",
-      "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-In, C325WB",
-      "price": 49.99,
-      "status": "ok",
+      "detail": "page title: Amazon.com | body snippet: Amazon.com Click the button below to continue shopping Continue shopping Conditions of Use Privacy Policy \u00a9 1996-2025, Amazon.com, Inc. or its affiliates",
+      "name": "Tapo ColorPro Wi-Fi Outdoor Camera, PoE, Plug-in, Daylight...",
+      "price": null,
+      "status": "no_price_found",
       "type": "product",
       "url": "https://www.amazon.com/dp/B0C48DZJ6Y"
     },
@@ -217,5 +217,5 @@
       "url": "https://www.amazon.com/dp/B01AB21E4M"
     }
   ],
-  "timestamp": "2026-11-28T00:58:48.428898+00:00"
+  "timestamp": "2026-11-28T08:45:32.385197+00:00"
 }
